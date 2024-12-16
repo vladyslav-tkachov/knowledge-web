@@ -1,0 +1,1180 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>UiPath guide</title><style>@charset "UTF-8";@import 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-alpha2/katex.min.css';code{color:#c7254e;background-color:#f9f2f4;border-radius:4px}code,kbd{padding:2px 4px}kbd{color:#fff;background-color:#333;border-radius:3px;box-shadow:inset 0 -1px 0 rgba(0,0,0,.25)}kbd kbd{padding:0;font-size:100%;box-shadow:none}pre{display:block;margin:0 0 10px;word-break:break-all;word-wrap:break-word;color:#333;background-color:#f5f5f5;border:1px solid #ccc;border-radius:4px}pre code{padding:0;font-size:inherit;color:inherit;white-space:pre-wrap;background-color:transparent;border-radius:0}.pre-scrollable{max-height:340px;overflow-y:scroll}table{background-color:transparent}th{text-align:left}.table{width:100%;max-width:100%;margin-bottom:20px}.table>thead>tr>th{padding:8px;line-height:1.4285714;border-top:1px solid #ddd}.table>thead>tr>td,.table>tbody>tr>th,.table>tbody>tr>td,.table>tfoot>tr>th,.table>tfoot>tr>td{padding:8px;line-height:1.4285714;vertical-align:top;border-top:1px solid #ddd}.table>thead>tr>th{vertical-align:bottom;border-bottom:2px solid #ddd}.table>caption+thead>tr:first-child>th,.table>caption+thead>tr:first-child>td,.table>colgroup+thead>tr:first-child>th,.table>colgroup+thead>tr:first-child>td,.table>thead:first-child>tr:first-child>th,.table>thead:first-child>tr:first-child>td{border-top:0}.table>tbody+tbody{border-top:2px solid #ddd}.table .table{background-color:#fff}.table-condensed>thead>tr>th,.table-condensed>thead>tr>td,.table-condensed>tbody>tr>th,.table-condensed>tbody>tr>td,.table-condensed>tfoot>tr>th,.table-condensed>tfoot>tr>td{padding:5px}.table-bordered,.table-bordered>thead>tr>th,.table-bordered>thead>tr>td,.table-bordered>tbody>tr>th,.table-bordered>tbody>tr>td,.table-bordered>tfoot>tr>th,.table-bordered>tfoot>tr>td{border:1px solid #ddd}.table-bordered>thead>tr>th,.table-bordered>thead>tr>td{border-bottom-width:2px}.table-striped>tbody>tr:nth-child(odd)>td,.table-striped>tbody>tr:nth-child(odd)>th{background-color:#f9f9f9}.table-hover>tbody>tr:hover>td,.table-hover>tbody>tr:hover>th{background-color:#f5f5f5}table col[class*="col-"]{position:static;float:none;display:table-column}table td[class*="col-"],table th[class*="col-"]{position:static;float:none;display:table-cell}.table>thead>tr>td.active,.table>thead>tr>th.active,.table>thead>tr.active>td,.table>thead>tr.active>th,.table>tbody>tr>td.active,.table>tbody>tr>th.active,.table>tbody>tr.active>td,.table>tbody>tr.active>th,.table>tfoot>tr>td.active,.table>tfoot>tr>th.active,.table>tfoot>tr.active>td,.table>tfoot>tr.active>th{background-color:#f5f5f5}.table-hover>tbody>tr>td.active:hover,.table-hover>tbody>tr>th.active:hover,.table-hover>tbody>tr.active:hover>td,.table-hover>tbody>tr:hover>.active,.table-hover>tbody>tr.active:hover>th{background-color:#e8e8e8}.table>thead>tr>td.success,.table>thead>tr>th.success,.table>thead>tr.success>td,.table>thead>tr.success>th,.table>tbody>tr>td.success,.table>tbody>tr>th.success,.table>tbody>tr.success>td,.table>tbody>tr.success>th,.table>tfoot>tr>td.success,.table>tfoot>tr>th.success,.table>tfoot>tr.success>td,.table>tfoot>tr.success>th{background-color:#dff0d8}.table-hover>tbody>tr>td.success:hover,.table-hover>tbody>tr>th.success:hover,.table-hover>tbody>tr.success:hover>td,.table-hover>tbody>tr:hover>.success,.table-hover>tbody>tr.success:hover>th{background-color:#d0e9c6}.table>thead>tr>td.info,.table>thead>tr>th.info,.table>thead>tr.info>td,.table>thead>tr.info>th,.table>tbody>tr>td.info,.table>tbody>tr>th.info,.table>tbody>tr.info>td,.table>tbody>tr.info>th,.table>tfoot>tr>td.info,.table>tfoot>tr>th.info,.table>tfoot>tr.info>td,.table>tfoot>tr.info>th{background-color:#d9edf7}.table-hover>tbody>tr>td.info:hover,.table-hover>tbody>tr>th.info:hover,.table-hover>tbody>tr.info:hover>td,.table-hover>tbody>tr:hover>.info,.table-hover>tbody>tr.info:hover>th{background-color:#c4e3f3}.table>thead>tr>td.warning,.table>thead>tr>th.warning,.table>thead>tr.warning>td,.table>thead>tr.warning>th,.table>tbody>tr>td.warning,.table>tbody>tr>th.warning,.table>tbody>tr.warning>td,.table>tbody>tr.warning>th,.table>tfoot>tr>td.warning,.table>tfoot>tr>th.warning,.table>tfoot>tr.warning>td,.table>tfoot>tr.warning>th{background-color:#fcf8e3}.table-hover>tbody>tr>td.warning:hover,.table-hover>tbody>tr>th.warning:hover,.table-hover>tbody>tr.warning:hover>td,.table-hover>tbody>tr:hover>.warning,.table-hover>tbody>tr.warning:hover>th{background-color:#faf2cc}.table>thead>tr>td.danger,.table>thead>tr>th.danger,.table>thead>tr.danger>td,.table>thead>tr.danger>th,.table>tbody>tr>td.danger,.table>tbody>tr>th.danger,.table>tbody>tr.danger>td,.table>tbody>tr.danger>th,.table>tfoot>tr>td.danger,.table>tfoot>tr>th.danger,.table>tfoot>tr.danger>td,.table>tfoot>tr.danger>th{background-color:#f2dede}.table-hover>tbody>tr>td.danger:hover,.table-hover>tbody>tr>th.danger:hover,.table-hover>tbody>tr.danger:hover>td,.table-hover>tbody>tr:hover>.danger,.table-hover>tbody>tr.danger:hover>th{background-color:#ebcccc}fieldset{border:0;min-width:0}legend{display:block;width:100%;margin-bottom:20px;font-size:21px;line-height:inherit;color:#333;border-bottom:1px solid #e5e5e5}label{display:inline-block;max-width:100%;margin-bottom:5px;font-weight:700}input[type="radio"],input[type="checkbox"]{margin:4px 0 0;margin-top:1px \9;line-height:normal}input[type="file"]{display:block}input[type="range"]{display:block;width:100%}select[multiple],select[size]{height:auto}input[type="file"]:focus,input[type="radio"]:focus,input[type="checkbox"]:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}output{padding-top:7px}output,.form-control{display:block;font-size:14px;line-height:1.4285714;color:#555}.form-control{width:100%;height:34px;padding:6px 12px;background-color:#fff;background-image:none;border:1px solid #ccc;border-radius:4px;box-shadow:inset 0 1px 1px rgba(0,0,0,.075);transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s}.form-control:focus{border-color:#66afe9;outline:0;box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)}.form-control::-moz-placeholder{color:#777;opacity:1}.form-control:-ms-input-placeholder{color:#777}.form-control::-webkit-input-placeholder{color:#777}.form-control[disabled],.form-control[readonly],fieldset[disabled] .form-control{cursor:not-allowed;background-color:#eee;opacity:1}textarea.form-control{height:auto}input[type="date"],input[type="time"],input[type="datetime-local"],input[type="month"]{line-height:34px;line-height:1.4285714 \0}input[type="date"].input-sm,.form-horizontal .form-group-sm input.form-control[type="date"],.input-group-sm>input.form-control[type="date"],.input-group-sm>input.input-group-addon[type="date"],.input-group-sm>.input-group-btn>input.btn[type="date"],input[type="time"].input-sm,.form-horizontal .form-group-sm input.form-control[type="time"],.input-group-sm>input.form-control[type="time"],.input-group-sm>input.input-group-addon[type="time"],.input-group-sm>.input-group-btn>input.btn[type="time"],input[type="datetime-local"].input-sm,.form-horizontal .form-group-sm input.form-control[type="datetime-local"],.input-group-sm>input.form-control[type="datetime-local"],.input-group-sm>input.input-group-addon[type="datetime-local"],.input-group-sm>.input-group-btn>input.btn[type="datetime-local"],input[type="month"].input-sm,.form-horizontal .form-group-sm input.form-control[type="month"],.input-group-sm>input.form-control[type="month"],.input-group-sm>input.input-group-addon[type="month"],.input-group-sm>.input-group-btn>input.btn[type="month"]{line-height:30px}input[type="date"].input-lg,.form-horizontal .form-group-lg input.form-control[type="date"],.input-group-lg>input.form-control[type="date"],.input-group-lg>input.input-group-addon[type="date"],.input-group-lg>.input-group-btn>input.btn[type="date"],input[type="time"].input-lg,.form-horizontal .form-group-lg input.form-control[type="time"],.input-group-lg>input.form-control[type="time"],.input-group-lg>input.input-group-addon[type="time"],.input-group-lg>.input-group-btn>input.btn[type="time"],input[type="datetime-local"].input-lg,.form-horizontal .form-group-lg input.form-control[type="datetime-local"],.input-group-lg>input.form-control[type="datetime-local"],.input-group-lg>input.input-group-addon[type="datetime-local"],.input-group-lg>.input-group-btn>input.btn[type="datetime-local"],input[type="month"].input-lg,.form-horizontal .form-group-lg input.form-control[type="month"],.input-group-lg>input.form-control[type="month"],.input-group-lg>input.input-group-addon[type="month"],.input-group-lg>.input-group-btn>input.btn[type="month"]{line-height:46px}.form-group{margin-bottom:15px}.radio,.checkbox{position:relative;display:block;min-height:20px;margin-top:10px;margin-bottom:10px}.radio label,.checkbox label{padding-left:20px;margin-bottom:0;font-weight:400;cursor:pointer}.radio input[type="radio"],.radio-inline input[type="radio"],.checkbox input[type="checkbox"],.checkbox-inline input[type="checkbox"]{position:absolute;margin-left:-20px;margin-top:4px \9}.radio+.radio,.checkbox+.checkbox{margin-top:-5px}.radio-inline,.checkbox-inline{display:inline-block;padding-left:20px;margin-bottom:0;vertical-align:middle;font-weight:400;cursor:pointer}.radio-inline+.radio-inline,.checkbox-inline+.checkbox-inline{margin-top:0;margin-left:10px}input[type="radio"][disabled],input[type="radio"].disabled,fieldset[disabled] input[type="radio"],input[type="checkbox"][disabled],input[type="checkbox"].disabled,fieldset[disabled] input[type="checkbox"],.radio-inline.disabled,fieldset[disabled] .radio-inline,.checkbox-inline.disabled,fieldset[disabled] .checkbox-inline,.radio.disabled label,fieldset[disabled] .radio label,.checkbox.disabled label,fieldset[disabled] .checkbox label{cursor:not-allowed}.form-control-static{padding-top:7px;padding-bottom:7px;margin-bottom:0}.form-control-static.input-lg,.form-horizontal .form-group-lg .form-control-static.form-control,.input-group-lg>.form-control-static.form-control,.input-group-lg>.form-control-static.input-group-addon,.input-group-lg>.input-group-btn>.form-control-static.btn,.form-control-static.input-sm,.form-horizontal .form-group-sm .form-control-static.form-control,.input-group-sm>.form-control-static.form-control,.input-group-sm>.form-control-static.input-group-addon,.input-group-sm>.input-group-btn>.form-control-static.btn{padding-left:0;padding-right:0}.input-sm,.form-horizontal .form-group-sm .form-control,.input-group-sm>.form-control{height:30px;padding:5px 10px;font-size:12px;line-height:1.5;border-radius:3px}.input-group-sm>.input-group-addon{height:30px;line-height:1.5}.input-group-sm>.input-group-btn>.btn{height:30px;padding:5px 10px;font-size:12px;line-height:1.5;border-radius:3px}select.input-sm,.form-horizontal .form-group-sm select.form-control,.input-group-sm>select.form-control,.input-group-sm>select.input-group-addon,.input-group-sm>.input-group-btn>select.btn{height:30px;line-height:30px}textarea.input-sm,.form-horizontal .form-group-sm textarea.form-control,.input-group-sm>textarea.form-control,.input-group-sm>textarea.input-group-addon,.input-group-sm>.input-group-btn>textarea.btn,select[multiple].input-sm,.form-horizontal .form-group-sm select.form-control[multiple],.input-group-sm>select.form-control[multiple],.input-group-sm>select.input-group-addon[multiple],.input-group-sm>.input-group-btn>select.btn[multiple]{height:auto}.input-lg,.form-horizontal .form-group-lg .form-control,.input-group-lg>.form-control{height:46px;padding:10px 16px;font-size:18px;line-height:1.33;border-radius:6px}.input-group-lg>.input-group-addon{height:46px;line-height:1.33}.input-group-lg>.input-group-btn>.btn{height:46px;padding:10px 16px;font-size:18px;line-height:1.33;border-radius:6px}select.input-lg,.form-horizontal .form-group-lg select.form-control,.input-group-lg>select.form-control,.input-group-lg>select.input-group-addon,.input-group-lg>.input-group-btn>select.btn{height:46px;line-height:46px}textarea.input-lg,.form-horizontal .form-group-lg textarea.form-control,.input-group-lg>textarea.form-control,.input-group-lg>textarea.input-group-addon,.input-group-lg>.input-group-btn>textarea.btn,select[multiple].input-lg,.form-horizontal .form-group-lg select.form-control[multiple],.input-group-lg>select.form-control[multiple],.input-group-lg>select.input-group-addon[multiple],.input-group-lg>.input-group-btn>select.btn[multiple]{height:auto}.has-feedback{position:relative}.has-feedback .form-control{padding-right:42.5px}.form-control-feedback{position:absolute;top:25px;right:0;z-index:2;display:block;width:34px;height:34px;line-height:34px;text-align:center}.input-lg+.form-control-feedback,.form-horizontal .form-group-lg .form-control+.form-control-feedback,.input-group-lg>.form-control+.form-control-feedback,.input-group-lg>.input-group-addon+.form-control-feedback,.input-group-lg>.input-group-btn>.btn+.form-control-feedback{width:46px;height:46px;line-height:46px}.input-sm+.form-control-feedback,.form-horizontal .form-group-sm .form-control+.form-control-feedback,.input-group-sm>.form-control+.form-control-feedback,.input-group-sm>.input-group-addon+.form-control-feedback,.input-group-sm>.input-group-btn>.btn+.form-control-feedback{width:30px;height:30px;line-height:30px}.has-success .help-block,.has-success .control-label,.has-success .radio,.has-success .checkbox,.has-success .radio-inline,.has-success .checkbox-inline{color:#3c763d}.has-success .form-control{border-color:#3c763d;box-shadow:inset 0 1px 1px rgba(0,0,0,.075)}.has-success .form-control:focus{border-color:#2b542c;box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #67b168}.has-success .input-group-addon{color:#3c763d;border-color:#3c763d;background-color:#dff0d8}.has-success .form-control-feedback{color:#3c763d}.has-warning .help-block,.has-warning .control-label,.has-warning .radio,.has-warning .checkbox,.has-warning .radio-inline,.has-warning .checkbox-inline{color:#8a6d3b}.has-warning .form-control{border-color:#8a6d3b;box-shadow:inset 0 1px 1px rgba(0,0,0,.075)}.has-warning .form-control:focus{border-color:#66512c;box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #c0a16b}.has-warning .input-group-addon{color:#8a6d3b;border-color:#8a6d3b;background-color:#fcf8e3}.has-warning .form-control-feedback{color:#8a6d3b}.has-error .help-block,.has-error .control-label,.has-error .radio,.has-error .checkbox,.has-error .radio-inline,.has-error .checkbox-inline{color:#a94442}.has-error .form-control{border-color:#a94442;box-shadow:inset 0 1px 1px rgba(0,0,0,.075)}.has-error .form-control:focus{border-color:#843534;box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #ce8483}.has-error .input-group-addon{color:#a94442;border-color:#a94442;background-color:#f2dede}.has-error .form-control-feedback{color:#a94442}.has-feedback label.sr-only~.form-control-feedback{top:0}.help-block{display:block;margin-top:5px;margin-bottom:10px;color:#737373}.form-horizontal .radio,.form-horizontal .checkbox,.form-horizontal .radio-inline,.form-horizontal .checkbox-inline{margin-top:0;margin-bottom:0;padding-top:7px}.form-horizontal .radio,.form-horizontal .checkbox{min-height:27px}.form-horizontal .form-group{margin-left:-15px;margin-right:-15px}.form-horizontal .form-group:before{content:" ";display:table}.form-horizontal .form-group:after{content:" ";display:table;clear:both}.form-horizontal .has-feedback .form-control-feedback{top:0;right:15px}.btn{display:inline-block;vertical-align:middle;cursor:pointer;background-image:none;border:1px solid transparent;white-space:nowrap;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.btn:focus,.btn:active:focus,.btn.active:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}.btn:hover,.btn:focus{color:#333;text-decoration:none}.btn:active,.btn.active{outline:0;background-image:none;box-shadow:inset 0 3px 5px rgba(0,0,0,.125)}.btn.disabled,.btn[disabled],fieldset[disabled] .btn{cursor:not-allowed;pointer-events:none;opacity:.65;filter:alpha(opacity=65);box-shadow:none}.btn-default{color:#333;background-color:#fff;border-color:#ccc}.btn-default:hover,.btn-default:focus,.btn-default:active,.btn-default.active,.open>.btn-default.dropdown-toggle{color:#333;background-color:#e6e6e6;border-color:#adadad}.btn-default:active,.btn-default.active,.open>.btn-default.dropdown-toggle{background-image:none}.btn-default.disabled,.btn-default.disabled:hover,.btn-default.disabled:focus,.btn-default.disabled:active,.btn-default.disabled.active,.btn-default[disabled],.btn-default[disabled]:hover,.btn-default[disabled]:focus,.btn-default[disabled]:active,.btn-default[disabled].active,fieldset[disabled] .btn-default,fieldset[disabled] .btn-default:hover,fieldset[disabled] .btn-default:focus,fieldset[disabled] .btn-default:active,fieldset[disabled] .btn-default.active{background-color:#fff;border-color:#ccc}.btn-default .badge{color:#fff;background-color:#333}.btn-primary{color:#fff;background-color:#428bca;border-color:#357ebd}.btn-primary:hover,.btn-primary:focus,.btn-primary:active,.btn-primary.active,.open>.btn-primary.dropdown-toggle{color:#fff;background-color:#3071a9;border-color:#285e8e}.btn-primary:active,.btn-primary.active,.open>.btn-primary.dropdown-toggle{background-image:none}.btn-primary.disabled,.btn-primary.disabled:hover,.btn-primary.disabled:focus,.btn-primary.disabled:active,.btn-primary.disabled.active,.btn-primary[disabled],.btn-primary[disabled]:hover,.btn-primary[disabled]:focus,.btn-primary[disabled]:active,.btn-primary[disabled].active,fieldset[disabled] .btn-primary,fieldset[disabled] .btn-primary:hover,fieldset[disabled] .btn-primary:focus,fieldset[disabled] .btn-primary:active,fieldset[disabled] .btn-primary.active{background-color:#428bca;border-color:#357ebd}.btn-primary .badge{color:#428bca;background-color:#fff}.btn-success{color:#fff;background-color:#5cb85c;border-color:#4cae4c}.btn-success:hover,.btn-success:focus,.btn-success:active,.btn-success.active,.open>.btn-success.dropdown-toggle{color:#fff;background-color:#449d44;border-color:#398439}.btn-success:active,.btn-success.active,.open>.btn-success.dropdown-toggle{background-image:none}.btn-success.disabled,.btn-success.disabled:hover,.btn-success.disabled:focus,.btn-success.disabled:active,.btn-success.disabled.active,.btn-success[disabled],.btn-success[disabled]:hover,.btn-success[disabled]:focus,.btn-success[disabled]:active,.btn-success[disabled].active,fieldset[disabled] .btn-success,fieldset[disabled] .btn-success:hover,fieldset[disabled] .btn-success:focus,fieldset[disabled] .btn-success:active,fieldset[disabled] .btn-success.active{background-color:#5cb85c;border-color:#4cae4c}.btn-success .badge{color:#5cb85c;background-color:#fff}.btn-info{color:#fff;background-color:#5bc0de;border-color:#46b8da}.btn-info:hover,.btn-info:focus,.btn-info:active,.btn-info.active,.open>.btn-info.dropdown-toggle{color:#fff;background-color:#31b0d5;border-color:#269abc}.btn-info:active,.btn-info.active,.open>.btn-info.dropdown-toggle{background-image:none}.btn-info.disabled,.btn-info.disabled:hover,.btn-info.disabled:focus,.btn-info.disabled:active,.btn-info.disabled.active,.btn-info[disabled],.btn-info[disabled]:hover,.btn-info[disabled]:focus,.btn-info[disabled]:active,.btn-info[disabled].active,fieldset[disabled] .btn-info,fieldset[disabled] .btn-info:hover,fieldset[disabled] .btn-info:focus,fieldset[disabled] .btn-info:active,fieldset[disabled] .btn-info.active{background-color:#5bc0de;border-color:#46b8da}.btn-info .badge{color:#5bc0de;background-color:#fff}.btn-warning{color:#fff;background-color:#f0ad4e;border-color:#eea236}.btn-warning:hover,.btn-warning:focus,.btn-warning:active,.btn-warning.active,.open>.btn-warning.dropdown-toggle{color:#fff;background-color:#ec971f;border-color:#d58512}.btn-warning:active,.btn-warning.active,.open>.btn-warning.dropdown-toggle{background-image:none}.btn-warning.disabled,.btn-warning.disabled:hover,.btn-warning.disabled:focus,.btn-warning.disabled:active,.btn-warning.disabled.active,.btn-warning[disabled],.btn-warning[disabled]:hover,.btn-warning[disabled]:focus,.btn-warning[disabled]:active,.btn-warning[disabled].active,fieldset[disabled] .btn-warning,fieldset[disabled] .btn-warning:hover,fieldset[disabled] .btn-warning:focus,fieldset[disabled] .btn-warning:active,fieldset[disabled] .btn-warning.active{background-color:#f0ad4e;border-color:#eea236}.btn-warning .badge{color:#f0ad4e;background-color:#fff}.btn-danger{color:#fff;background-color:#d9534f;border-color:#d43f3a}.btn-danger:hover,.btn-danger:focus,.btn-danger:active,.btn-danger.active,.open>.btn-danger.dropdown-toggle{color:#fff;background-color:#c9302c;border-color:#ac2925}.btn-danger:active,.btn-danger.active,.open>.btn-danger.dropdown-toggle{background-image:none}.btn-danger.disabled,.btn-danger.disabled:hover,.btn-danger.disabled:focus,.btn-danger.disabled:active,.btn-danger.disabled.active,.btn-danger[disabled],.btn-danger[disabled]:hover,.btn-danger[disabled]:focus,.btn-danger[disabled]:active,.btn-danger[disabled].active,fieldset[disabled] .btn-danger,fieldset[disabled] .btn-danger:hover,fieldset[disabled] .btn-danger:focus,fieldset[disabled] .btn-danger:active,fieldset[disabled] .btn-danger.active{background-color:#d9534f;border-color:#d43f3a}.btn-danger .badge{color:#d9534f;background-color:#fff}.btn-link{color:#428bca;font-weight:400;cursor:pointer;border-radius:0}.btn-link,.btn-link:active,.btn-link[disabled],fieldset[disabled] .btn-link{background-color:transparent;box-shadow:none}.btn-link,.btn-link:hover,.btn-link:focus,.btn-link:active{border-color:transparent}.btn-link:hover,.btn-link:focus{color:#2a6496;text-decoration:underline;background-color:transparent}.btn-link[disabled]:hover,.btn-link[disabled]:focus,fieldset[disabled] .btn-link:hover,fieldset[disabled] .btn-link:focus{color:#777;text-decoration:none}.btn-lg{padding:10px 16px;font-size:18px;line-height:1.33;border-radius:6px}.btn-sm{padding:5px 10px}.btn-sm,.btn-xs{font-size:12px;line-height:1.5;border-radius:3px}.btn-xs{padding:1px 5px}.btn-block{display:block;width:100%}.btn-block+.btn-block{margin-top:5px}input[type="submit"].btn-block,input[type="reset"].btn-block,input[type="button"].btn-block{width:100%}.fade{opacity:0;transition:opacity .15s linear}.fade.in{opacity:1}.collapse{display:none}.collapse.in{display:block}tr.collapse.in{display:table-row}tbody.collapse.in{display:table-row-group}.collapsing{position:relative;height:0;overflow:hidden;transition:height .35s ease}.input-group{position:relative;display:table;border-collapse:separate}.input-group[class*="col-"]{float:none;padding-left:0;padding-right:0}.input-group .form-control{position:relative;z-index:2;float:left;width:100%;margin-bottom:0}.input-group-addon,.input-group-btn,.input-group .form-control{display:table-cell}.input-group-addon:not(:first-child):not(:last-child),.input-group-btn:not(:first-child):not(:last-child),.input-group .form-control:not(:first-child):not(:last-child){border-radius:0}.input-group-addon{white-space:nowrap}.input-group-addon,.input-group-btn{width:1%;vertical-align:middle}.input-group-addon{padding:6px 12px;font-size:14px;font-weight:400;line-height:1;color:#555;text-align:center;background-color:#eee;border:1px solid #ccc;border-radius:4px}.input-group-addon.input-sm,.form-horizontal .form-group-sm .input-group-addon.form-control,.input-group-sm>.input-group-addon,.input-group-sm>.input-group-btn>.input-group-addon.btn{padding:5px 10px;font-size:12px;border-radius:3px}.input-group-addon.input-lg,.form-horizontal .form-group-lg .input-group-addon.form-control,.input-group-lg>.input-group-addon,.input-group-lg>.input-group-btn>.input-group-addon.btn{padding:10px 16px;font-size:18px;border-radius:6px}.input-group-addon input[type="radio"],.input-group-addon input[type="checkbox"]{margin-top:0}.input-group .form-control:first-child,.input-group-addon:first-child,.input-group-btn:first-child>.btn,.input-group-btn:first-child>.btn-group>.btn,.input-group-btn:first-child>.dropdown-toggle,.input-group-btn:last-child>.btn:not(:last-child):not(.dropdown-toggle),.input-group-btn:last-child>.btn-group:not(:last-child)>.btn{border-bottom-right-radius:0;border-top-right-radius:0}.input-group-addon:first-child{border-right:0}.input-group .form-control:last-child,.input-group-addon:last-child,.input-group-btn:last-child>.btn,.input-group-btn:last-child>.btn-group>.btn,.input-group-btn:last-child>.dropdown-toggle,.input-group-btn:first-child>.btn:not(:first-child),.input-group-btn:first-child>.btn-group:not(:first-child)>.btn{border-bottom-left-radius:0;border-top-left-radius:0}.input-group-addon:last-child{border-left:0}.input-group-btn{font-size:0;white-space:nowrap}.input-group-btn,.input-group-btn>.btn{position:relative}.input-group-btn>.btn+.btn{margin-left:-1px}.input-group-btn>.btn:hover,.input-group-btn>.btn:focus,.input-group-btn>.btn:active{z-index:2}.input-group-btn:first-child>.btn,.input-group-btn:first-child>.btn-group{margin-right:-1px}.input-group-btn:last-child>.btn,.input-group-btn:last-child>.btn-group{margin-left:-1px}.pagination{display:inline-block;padding-left:0;margin:20px 0;border-radius:4px}.pagination>li{display:inline}.pagination>li>a,.pagination>li>span{position:relative;float:left;padding:6px 12px;line-height:1.4285714;text-decoration:none;color:#428bca;background-color:#fff;border:1px solid #ddd;margin-left:-1px}.pagination>li:first-child>a,.pagination>li:first-child>span{margin-left:0;border-bottom-left-radius:4px;border-top-left-radius:4px}.pagination>li:last-child>a,.pagination>li:last-child>span{border-bottom-right-radius:4px;border-top-right-radius:4px}.pagination>li>a:hover,.pagination>li>a:focus,.pagination>li>span:hover,.pagination>li>span:focus{color:#2a6496;background-color:#eee;border-color:#ddd}.pagination>.active>a,.pagination>.active>a:hover,.pagination>.active>a:focus,.pagination>.active>span,.pagination>.active>span:hover,.pagination>.active>span:focus{z-index:2;color:#fff;background-color:#428bca;border-color:#428bca;cursor:default}.pagination>.disabled>span,.pagination>.disabled>span:hover,.pagination>.disabled>span:focus,.pagination>.disabled>a,.pagination>.disabled>a:hover,.pagination>.disabled>a:focus{color:#777;background-color:#fff;border-color:#ddd;cursor:not-allowed}.pagination-lg>li>a,.pagination-lg>li>span{padding:10px 16px;font-size:18px}.pagination-lg>li:first-child>a,.pagination-lg>li:first-child>span{border-bottom-left-radius:6px;border-top-left-radius:6px}.pagination-lg>li:last-child>a,.pagination-lg>li:last-child>span{border-bottom-right-radius:6px;border-top-right-radius:6px}.pagination-sm>li>a,.pagination-sm>li>span{padding:5px 10px;font-size:12px}.pagination-sm>li:first-child>a,.pagination-sm>li:first-child>span{border-bottom-left-radius:3px;border-top-left-radius:3px}.pagination-sm>li:last-child>a,.pagination-sm>li:last-child>span{border-bottom-right-radius:3px;border-top-right-radius:3px}.close{float:right;font-size:21px;font-weight:700;line-height:1;color:#000;text-shadow:0 1px 0 #fff;opacity:.2;filter:alpha(opacity=20)}.close:hover,.close:focus{color:#000;text-decoration:none;cursor:pointer;opacity:.5;filter:alpha(opacity=50)}button.close{padding:0;cursor:pointer;background:0 0;border:0;-webkit-appearance:none}.modal-open,.modal{overflow:hidden}.modal{display:none;position:fixed;top:0;right:0;bottom:0;left:0;z-index:1050;-webkit-overflow-scrolling:touch;outline:0}.modal.fade .modal-dialog{transform:translate3d(0,-25%,0);transition:transform .3s ease-out}.modal.in .modal-dialog{transform:translate3d(0,0,0)}.modal-open .modal{overflow-x:hidden;overflow-y:auto}.modal-dialog{position:relative;width:auto;margin:10px}.modal-content{position:relative;background-color:#fff;border:1px solid #999;border:1px solid rgba(0,0,0,.2);border-radius:6px;box-shadow:0 3px 9px rgba(0,0,0,.5);background-clip:padding-box;outline:0}.modal-backdrop{position:fixed;top:0;right:0;bottom:0;left:0;z-index:1040;background-color:#000}.modal-backdrop.fade{opacity:0;filter:alpha(opacity=0)}.modal-backdrop.in{opacity:.5;filter:alpha(opacity=50)}.modal-header{padding:15px;border-bottom:1px solid #e5e5e5;min-height:16.4285714px}.modal-header .close{margin-top:-2px}.modal-title{margin:0;line-height:1.4285714}.modal-body{position:relative;padding:15px}.modal-footer{padding:15px;text-align:right;border-top:1px solid #e5e5e5}.modal-footer:before,.modal-footer:after{content:" ";display:table}.modal-footer:after{clear:both}.modal-footer .btn+.btn{margin-left:5px;margin-bottom:0}.modal-footer .btn-group .btn+.btn{margin-left:-1px}.modal-footer .btn-block+.btn-block{margin-left:0}.modal-scrollbar-measure{position:absolute;top:-9999px;width:50px;height:50px;overflow:scroll}.clearfix:before,.clearfix:after{content:" ";display:table}.clearfix:after{clear:both}.center-block{display:block;margin-left:auto;margin-right:auto}.pull-right{float:right!important}.pull-left{float:left!important}.hide{display:none!important}.show{display:block!important}.invisible{visibility:hidden}.text-hide{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0}.hidden{display:none!important;visibility:hidden!important}.affix{position:fixed;transform:translate3d(0,0,0)}.hljs{display:block;overflow-x:auto;padding:.5em;background:#002b36;color:#839496;-webkit-text-size-adjust:none}.hljs-comment,.hljs-template_comment,.diff .hljs-header,.hljs-doctype,.hljs-pi,.lisp .hljs-string,.hljs-javadoc{color:#586e75}.hljs-keyword,.hljs-winutils,.method,.hljs-addition,.css .hljs-tag,.hljs-request,.hljs-status,.nginx .hljs-title{color:#859900}.hljs-number,.hljs-command,.hljs-string,.hljs-tag .hljs-value,.hljs-rules .hljs-value,.hljs-phpdoc,.hljs-dartdoc,.tex .hljs-formula,.hljs-regexp,.hljs-hexcolor,.hljs-link_url{color:#2aa198}.hljs-title,.hljs-localvars,.hljs-chunk,.hljs-decorator,.hljs-built_in,.hljs-identifier,.vhdl .hljs-literal,.hljs-id,.css .hljs-function{color:#268bd2}.hljs-attribute,.hljs-variable,.lisp .hljs-body,.smalltalk .hljs-number,.hljs-constant,.hljs-class .hljs-title,.hljs-parent,.hljs-type,.hljs-link_reference{color:#b58900}.hljs-preprocessor,.hljs-preprocessor .hljs-keyword,.hljs-pragma,.hljs-shebang,.hljs-symbol,.hljs-symbol .hljs-string,.diff .hljs-change,.hljs-special,.hljs-attr_selector,.hljs-subst,.hljs-cdata,.css .hljs-pseudo,.hljs-header{color:#cb4b16}.hljs-deletion,.hljs-important{color:#dc322f}.hljs-link_label{color:#6c71c4}.tex .hljs-formula{background:#073642}*,*:before,*:after{box-sizing:border-box}html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background:0 0}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}images{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}pre{overflow:auto}code,kbd{font-size:1em}code,kbd,pre,samp{font-family:monospace,monospace}samp{font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0;margin-right:5px}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:700}table{border-collapse:collapse;border-spacing:0}.debug{background-color:#ffc0cb!important}.ellipsis{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.ir{background-color:transparent;border:0;overflow:hidden}.ir::before{content:'';display:block;height:150%;width:0}html{font-size:.875em;background:#fff;color:#373D49}html,body{font-family:Georgia,Cambria,serif;height:100%}body{font-size:1rem;font-weight:400;line-height:2rem}ul,ol{margin-bottom:.83999rem;padding-top:.16001rem}li{font-feature-settings:'kern' 1,'onum' 1,'liga' 1;margin-left:1rem}li>ul,li>ol{margin-bottom:0}p{padding-top:.66001rem;font-feature-settings:'kern' 1,'onum' 1,'liga' 1;margin-top:0}p,pre{margin-bottom:1.33999rem}pre{font-size:1rem;padding:.66001rem 9.5px 9.5px;line-height:2rem;background:linear-gradient(to bottom,#fff 0,#fff .75rem,#f5f7fa .75rem,#f5f7fa 2.75rem,#fff 2.75rem,#fff 4rem);background-size:100% 4rem;border-color:#D3DAEA}blockquote{margin:0}blockquote p{font-size:1rem;margin-bottom:.33999rem;font-style:italic;padding:.66001rem 1rem 1rem;border-left:3px solid #A0AABF}th,td{padding:12px}h1,h2,h3,h4,h5,h6{font-family:"Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;font-feature-settings:'dlig' 1,'liga' 1,'lnum' 1,'kern' 1;font-style:normal;font-weight:600;margin-top:0}h1{line-height:3rem;font-size:2.0571429rem;margin-bottom:.21999rem;padding-top:.78001rem}h2{font-size:1.953125rem;margin-bottom:.1835837rem;padding-top:.8164163rem}h2,h3{line-height:3rem}h3{font-size:1.6457143rem;margin-bottom:.07599rem;padding-top:.92401rem}h4{font-size:1.5625rem;margin-bottom:.546865rem;padding-top:.453135rem}h5{font-size:1.25rem;margin-bottom:-.56251rem;padding-top:.56251rem}h6{font-size:1rem;margin-bottom:-.65001rem;padding-top:.65001rem}a{cursor:pointer;color:#35D7BB;text-decoration:none}a:hover,a:focus{border-bottom-color:#35D7BB;color:#dff9f4}img{height:auto;max-width:100%}dt{font-style:italic;font-weight:600}.g{display:block}.g:after{clear:both;content:'';display:table}.g-b{float:left;margin:0;width:100%}.g{margin-left:-16px;margin-right:-16px}.g-b{padding-left:16px;padding-right:16px}.g-b--center{display:block;float:none;margin:0 auto}.g-b--right{float:right}.g-b--1of1{width:100%}.g-b--1of2,.g-b--2of4,.g-b--3of6,.g-b--4of8,.g-b--5of10,.g-b--6of12{width:50%}.g-b--1of3,.g-b--2of6,.g-b--4of12{width:33.333%}.g-b--2of3,.g-b--4of6,.g-b--8of12{width:66.666%}.g-b--1of4,.g-b--2of8,.g-b--3of12{width:25%}.g-b--3of4,.g-b--6of8,.g-b--9of12{width:75%}.g-b--1of5,.g-b--2of10{width:20%}.g-b--2of5,.g-b--4of10{width:40%}.g-b--3of5,.g-b--6of10{width:60%}.g-b--4of5,.g-b--8of10{width:80%}.g-b--1of6,.g-b--2of12{width:16.666%}.g-b--5of6,.g-b--10of12{width:83.333%}.g-b--1of8{width:12.5%}.g-b--3of8{width:37.5%}.g-b--5of8{width:62.5%}.g-b--7of8{width:87.5%}.g-b--1of10{width:10%}.g-b--3of10{width:30%}.g-b--7of10{width:70%}.g-b--9of10{width:90%}.g-b--1of12{width:8.333%}.g-b--5of12{width:41.666%}.g-b--7of12{width:58.333%}.g-b--11of12{width:91.666%}.g-b--push--1of1{margin-left:100%}.g-b--push--1of2,.g-b--push--2of4,.g-b--push--3of6,.g-b--push--4of8,.g-b--push--5of10,.g-b--push--6of12{margin-left:50%}.g-b--push--1of3,.g-b--push--2of6,.g-b--push--4of12{margin-left:33.333%}.g-b--push--2of3,.g-b--push--4of6,.g-b--push--8of12{margin-left:66.666%}.g-b--push--1of4,.g-b--push--2of8,.g-b--push--3of12{margin-left:25%}.g-b--push--3of4,.g-b--push--6of8,.g-b--push--9of12{margin-left:75%}.g-b--push--1of5,.g-b--push--2of10{margin-left:20%}.g-b--push--2of5,.g-b--push--4of10{margin-left:40%}.g-b--push--3of5,.g-b--push--6of10{margin-left:60%}.g-b--push--4of5,.g-b--push--8of10{margin-left:80%}.g-b--push--1of6,.g-b--push--2of12{margin-left:16.666%}.g-b--push--5of6,.g-b--push--10of12{margin-left:83.333%}.g-b--push--1of8{margin-left:12.5%}.g-b--push--3of8{margin-left:37.5%}.g-b--push--5of8{margin-left:62.5%}.g-b--push--7of8{margin-left:87.5%}.g-b--push--1of10{margin-left:10%}.g-b--push--3of10{margin-left:30%}.g-b--push--7of10{margin-left:70%}.g-b--push--9of10{margin-left:90%}.g-b--push--1of12{margin-left:8.333%}.g-b--push--5of12{margin-left:41.666%}.g-b--push--7of12{margin-left:58.333%}.g-b--push--11of12{margin-left:91.666%}.g-b--pull--1of1{margin-right:100%}.g-b--pull--1of2,.g-b--pull--2of4,.g-b--pull--3of6,.g-b--pull--4of8,.g-b--pull--5of10,.g-b--pull--6of12{margin-right:50%}.g-b--pull--1of3,.g-b--pull--2of6,.g-b--pull--4of12{margin-right:33.333%}.g-b--pull--2of3,.g-b--pull--4of6,.g-b--pull--8of12{margin-right:66.666%}.g-b--pull--1of4,.g-b--pull--2of8,.g-b--pull--3of12{margin-right:25%}.g-b--pull--3of4,.g-b--pull--6of8,.g-b--pull--9of12{margin-right:75%}.g-b--pull--1of5,.g-b--pull--2of10{margin-right:20%}.g-b--pull--2of5,.g-b--pull--4of10{margin-right:40%}.g-b--pull--3of5,.g-b--pull--6of10{margin-right:60%}.g-b--pull--4of5,.g-b--pull--8of10{margin-right:80%}.g-b--pull--1of6,.g-b--pull--2of12{margin-right:16.666%}.g-b--pull--5of6,.g-b--pull--10of12{margin-right:83.333%}.g-b--pull--1of8{margin-right:12.5%}.g-b--pull--3of8{margin-right:37.5%}.g-b--pull--5of8{margin-right:62.5%}.g-b--pull--7of8{margin-right:87.5%}.g-b--pull--1of10{margin-right:10%}.g-b--pull--3of10{margin-right:30%}.g-b--pull--7of10{margin-right:70%}.g-b--pull--9of10{margin-right:90%}.g-b--pull--1of12{margin-right:8.333%}.g-b--pull--5of12{margin-right:41.666%}.g-b--pull--7of12{margin-right:58.333%}.g-b--pull--11of12{margin-right:91.666%}.splashscreen{position:fixed;top:0;left:0;width:100%;height:100%;background-color:#373D49;z-index:22}.splashscreen-dillinger{width:260px;height:auto;display:block;margin:0 auto;padding-bottom:3rem}.splashscreen p{font-size:1.25rem;padding-top:.56251rem;font-family:"Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:400;text-align:center;max-width:500px;margin:0 auto;color:#FFF}.sp-center{position:relative;transform:translateY(-50%);top:50%}.open-menu>.wrapper{overflow-x:hidden}.page{margin:0 auto;position:relative;top:0;left:0;width:100%;height:100%;z-index:2;transition:all .25s ease-in-out;background-color:#fff;padding-top:51px;will-change:left}.open-menu .page{left:270px}.title{line-height:1rem;font-size:.8rem;margin-bottom:.77999rem;padding-top:.22001rem;font-weight:500;color:#A0AABF;letter-spacing:1px;text-transform:uppercase;padding-left:16px;padding-right:16px;margin-top:1rem}.split-preview .title{padding-left:0}.title-document{line-height:1rem;font-size:1.25rem;margin-bottom:.89999rem;padding-top:.10001rem;font-weight:400;font-family:"Ubuntu Mono",Monaco;color:#373D49;padding-left:16px;padding-right:16px;width:80%;min-width:300px;outline:0;border:none}.icon{display:block;margin:0 auto;width:36px;height:36px;border-radius:3px;text-align:center}.icon svg{display:inline-block;margin-left:auto;margin-right:auto}.icon-preview{background-color:#373D49;line-height:40px}.icon-preview svg{width:19px;height:12px}.icon-settings{background-color:#373D49;line-height:44px}.icon-settings svg{width:18px;height:18px}.icon-link{width:16px;height:16px;line-height:1;margin-right:24px;text-align:right}.navbar{background-color:#373D49;height:51px;width:100%;position:fixed;top:0;left:0;z-index:6;transition:all .25s ease-in-out;will-change:left}.navbar:after{content:"";display:table;clear:both}.open-menu .navbar{left:270px}.navbar-brand{float:left;margin:0 0 0 24px;padding:0;line-height:42px}.navbar-brand svg{width:85px;height:11px}.nav-left{float:left}.nav-right{float:right}.nav-sidebar{width:100%}.menu{list-style:none;margin:0;padding:0}.menu a{border:0;color:#A0AABF;font-family:"Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;outline:none;text-transform:uppercase}.menu a:hover{color:#35D7BB}.menu .menu-item{border:0;display:none;float:left;margin:0;position:relative}.menu .menu-item>a{display:block;font-size:12px;height:51px;letter-spacing:1px;line-height:51px;padding:0 24px}.menu .menu-item--settings,.menu .menu-item--preview,.menu .menu-item--save-to.in-sidebar,.menu .menu-item--import-from.in-sidebar,.menu .menu-item--link-unlink.in-sidebar,.menu .menu-item--documents.in-sidebar{display:block}.menu .menu-item--documents{padding-bottom:1rem}.menu .menu-item.open>a{background-color:#1D212A}.menu .menu-item-icon>a{height:auto;padding:0}.menu .menu-item-icon:hover>a{background-color:transparent}.menu .menu-link.open i{background-color:#1D212A}.menu .menu-link.open g{fill:#35D7BB}.menu .menu-link-preview,.menu .menu-link-settings{margin-top:8px;width:51px}.menu-sidebar{width:100%}.menu-sidebar .menu-item{float:none;margin-bottom:1px;width:100%}.menu-sidebar .menu-item.open>a{background-color:#373D49}.menu-sidebar .open .caret{transform:rotate(180deg)}.menu-sidebar>.menu-item:hover .dropdown a,.menu-sidebar>.menu-item:hover .settings a{background-color:transparent}.menu-sidebar .menu-link{background-color:#373D49;font-weight:600}.menu-sidebar .menu-link:after{content:"";display:table;clear:both}.menu-sidebar .menu-link>span{float:left}.menu-sidebar .menu-link>.caret{float:right;text-align:right;top:22px}.menu-sidebar .dropdown,.menu-sidebar .settings{background-color:transparent;position:static;width:100%}.dropdown{position:absolute;right:0;top:51px;width:188px}.dropdown,.settings{display:none;background-color:#1D212A}.dropdown{padding:0}.dropdown,.settings,.sidebar-list{list-style:none;margin:0}.sidebar-list{padding:0}.dropdown li{margin:32px 0;padding:0 0 0 32px}.dropdown li,.settings li{line-height:1}.sidebar-list li{line-height:1;margin:32px 0;padding:0 0 0 32px}.dropdown a{color:#D0D6E2}.dropdown a,.settings a,.sidebar-list a{display:block;text-transform:none}.sidebar-list a{color:#D0D6E2}.dropdown a:after,.settings a:after,.sidebar-list a:after{content:"";display:table;clear:both}.dropdown .icon,.settings .icon,.sidebar-list .icon{float:right}.open .dropdown,.open .settings,.open .sidebar-list{display:block}.open .dropdown.collapse,.open .collapse.settings,.open .sidebar-list.collapse{display:none}.open .dropdown.collapse.in,.open .collapse.in.settings,.open .sidebar-list.collapse.in{display:block}.dropdown .unlinked .icon,.settings .unlinked .icon,.sidebar-list .unlinked .icon{opacity:.3}.dropdown.documents li,.documents.settings li,.sidebar-list.documents li{background-image:url("../img/icons/file.svg");background-position:240px center;background-repeat:no-repeat;background-size:14px 16px;padding:3px 32px}.dropdown.documents li.octocat,.documents.settings li.octocat,.sidebar-list.documents li.octocat{background-image:url("../img/icons/octocat.svg");background-position:234px center;background-size:24px 24px}.dropdown.documents li:last-child,.documents.settings li:last-child,.sidebar-list.documents li:last-child{margin-bottom:1rem}.dropdown.documents li.active a,.documents.settings li.active a,.sidebar-list.documents li.active a{color:#35D7BB}.settings{position:fixed;top:67px;right:16px;border-radius:3px;width:288px;background-color:#373D49;padding:16px;z-index:7}.show-settings .settings{display:block}.settings .has-checkbox{float:left}.settings form{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;-ms-flex-pack:justify;justify-content:space-between}.settings input{width:20%}.settings a{font-size:1.25rem;font-family:"Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:400;-webkit-font-smoothing:antialiased;line-height:28px;color:#D0D6E2}.settings a:after{content:"";display:table;clear:both}.settings a:hover{color:#35D7BB}.settings li{border-bottom:1px solid #4F535B;margin:0;padding:16px 0}.settings li:last-child{border-bottom:none}.brand{border:none;display:block}.brand:hover g{fill:#35D7BB}.toggle{display:block;float:left;height:16px;padding:25px 16px 26px;width:40px}.toggle span:after,.toggle span:before{content:'';left:0;position:absolute;top:-6px}.toggle span:after{top:6px}.toggle span{display:block;position:relative}.toggle span,.toggle span:after,.toggle span:before{-webkit-backface-visibility:hidden;backface-visibility:hidden;background-color:#D3DAEA;height:2px;transition:all .3s;width:20px}.open-menu .toggle span{background-color:transparent}.open-menu .toggle span:before{transform:rotate(45deg) translate(3px,3px)}.open-menu .toggle span:after{transform:rotate(-45deg) translate(5px,-6px)}.caret{display:inline-block;width:0;height:0;margin-left:6px;vertical-align:middle;position:relative;top:-1px;border-top:4px solid;border-right:4px solid transparent;border-left:4px solid transparent}.sidebar{overflow:auto;height:100%;padding-right:15px;padding-bottom:15px;width:285px}.sidebar-wrapper{-webkit-overflow-scrolling:touch;background-color:#2B2F36;left:0;height:100%;overflow-y:hidden;position:fixed;top:0;width:285px;z-index:1}.sidebar-branding{width:160px;padding:0;margin:16px auto}.header{border-bottom:1px solid #E8E8E8;position:relative}.words,.characters{line-height:1rem;font-size:.8rem;margin-bottom:.77999rem;padding-top:.22001rem;font-weight:500;font-family:"Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;letter-spacing:1px;text-transform:uppercase;z-index:5;position:absolute;right:16px;top:0}.words span,.characters span{color:#A0AABF}.words .counter,.characters .counter{color:#000}.words+.characters{top:22px}.mr10{margin-right:10px}.btn{text-align:center;display:inline-block;width:100%;text-transform:uppercase;font-weight:600;font-family:"Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;text-shadow:0 1px 0 #1b8b77;padding:16px 24px;background-color:#35D7BB;border-radius:3px;margin:0 auto 16px;line-height:1;color:#fff;transition:all .15s linear;-webkit-font-smoothing:antialiased}.btn--new,.btn--save{display:block;width:238px}.btn--new:hover,.btn--new:focus,.btn--save:hover,.btn--save:focus{color:#fff;border-bottom-color:transparent;box-shadow:0 1px 3px #24b59c;text-shadow:0 1px 0 #24b59c}.btn--save{background-color:#4A5261;text-shadow:0 1px 1px #1e2127}.btn--save:hover,.btn--save:focus{color:#fff;border-bottom-color:transparent;box-shadow:0 1px 5px #08090a;text-shadow:none}.btn--delete{display:block;width:238px;background-color:transparent;font-size:12px;text-shadow:none}.btn--delete:hover,.btn--delete:focus{color:#fff;border-bottom-color:transparent;text-shadow:0 1px 0 #08090a;opacity:.8}.btn--delete-modal,.btn--ok,.btn--close{border-top:0;background-color:#4A5261;text-shadow:0 1px 0 #08090a;margin:0}.btn--delete-modal:hover,.btn--delete-modal:focus,.btn--ok:hover,.btn--ok:focus,.btn--close:hover,.btn--close:focus{color:#fff;background-color:#292d36;text-shadow:none}.btn--delete-modal{display:inline;width:auto}.overlay{position:absolute;top:0;left:0;width:100%;height:100%;background-color:rgba(55,61,73,.8);transition:all .25s ease-in-out;transition-timing-function:ease-out;will-change:left,opacity,visibility;z-index:5;opacity:0;visibility:hidden}.show-settings .overlay{visibility:visible;opacity:1}.switch{float:right;line-height:1}.switch input{display:none}.switch small{display:inline-block;cursor:pointer;padding:0 24px 0 0;transition:all ease .2s;background-color:#2B2F36;border-color:#2B2F36}.switch small,.switch small:before{border-radius:30px;box-shadow:inset 0 0 2px 0 #14171F}.switch small:before{display:block;content:'';width:28px;height:28px;background:#fff}.switch.checked small{padding-right:0;padding-left:24px;background-color:#35D7BB;box-shadow:none}.modal--dillinger.about .modal-dialog{font-size:1.25rem;max-width:500px}.modal--dillinger.scope .modal-dialog{max-width:300px;margin:5rem auto}.modal--dillinger .modal-dialog{max-width:600px;width:auto;margin:5rem auto}.modal--dillinger .modal-content{background:#373D49;border-radius:3px;box-shadow:0 2px 5px 0 #2C3B59;color:#fff;font-family:"Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:400;padding:2rem}.modal--dillinger ul{list-style-type:disc;margin:1rem 0;padding:0 0 0 1rem}.modal--dillinger li{padding:0;margin:0}.modal--dillinger .modal-header{border:0;padding:0}.modal--dillinger .modal-body{padding:0}.modal--dillinger .modal-footer{border:0;padding:0}.modal--dillinger .close{color:#fff;opacity:1}.modal-backdrop{background-color:#373D49}.pagination--dillinger{padding:0!important;margin:1.5rem 0!important;display:-ms-flexbox;display:flex;-ms-flex-pack:justify;justify-content:space-between;-ms-flex-direction:row;flex-direction:row;-ms-flex-align:center;align-items:center;-ms-flex-line-pack:stretch;align-content:stretch}.pagination--dillinger li{display:-ms-flexbox;display:flex;-ms-flex-positive:1;flex-grow:1;text-align:center}.pagination--dillinger li:first-child>a,.pagination--dillinger li.disabled>a,.pagination--dillinger li.disabled>a:hover,.pagination--dillinger li.disabled>a:focus,.pagination--dillinger li>a{background-color:transparent;border-color:#4F535B;border-right-color:transparent}.pagination--dillinger li.active>a,.pagination--dillinger li.active>a:hover,.pagination--dillinger li.active>a:focus{border-color:#4A5261;background-color:#4A5261;color:#fff}.pagination--dillinger li>a{float:none;color:#fff;width:100%;display:block;text-align:center;margin:0;border-right-color:transparent;padding:6px}.pagination--dillinger li>a:hover,.pagination--dillinger li>a:focus{border-color:#35D7BB;background-color:#35D7BB;color:#fff}.pagination--dillinger li:last-child a{border-color:#4F535B}.pagination--dillinger li:first-child a{border-right-color:transparent}.diNotify{position:absolute;z-index:9999;left:0;right:0;top:0;margin:0 auto;max-width:400px;text-align:center;transition:top .5s ease-in-out,opacity .5s ease-in-out;visibility:hidden}.diNotify-body{-webkit-font-smoothing:antialiased;background-color:#35D7BB;background:#666E7F;border-radius:3px;color:#fff;font-family:"Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:400;overflow:hidden;padding:1rem 2rem .5rem;display:-ms-flexbox;display:flex;-ms-flex-align:baseline;align-items:baseline;-ms-flex-pack:center;justify-content:center}.diNotify-icon{display:block;width:16px;height:16px;line-height:16px;position:relative;top:3px}.diNotify-message{padding-left:1rem}.zen-wrapper{position:fixed;top:0;left:0;right:0;bottom:0;width:100%;height:100%;z-index:10;background-color:#FFF;opacity:0;transition:opacity .25s ease-in-out}.zen-wrapper.on{opacity:1}.enter-zen-mode{background-image:url("../img/icons/enter-zen.svg");right:.5rem;top:.313rem;display:none}.enter-zen-mode,.close-zen-mode{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0;background-repeat:no-repeat;width:32px;height:32px;display:block;position:absolute}.close-zen-mode{background-image:url("../img/icons/exit-zen.svg");right:1rem;top:1rem}.zen-page{position:relative;top:0;bottom:0;z-index:11;height:100%;width:100%}#zen{font-size:1.25rem;width:300px;height:80%;margin:0 auto;position:relative;top:10%}#zen:before,#zen:after{content:"";position:absolute;height:10%;width:100%;z-index:12;pointer-events:none}#preview .table{width:auto}.ui-resizable{position:relative}.ui-resizable-handle{position:absolute;font-size:.1px;z-index:99999;display:block}.ui-resizable-e{background-color:#666;border-right:8px solid #e8e8e8;border-left:1px solid #222;width:10px;z-index:88!important;position:relative}.ui-resizable-e:after{content:"-";display:block;position:absolute;top:calc(50% - 16px);left:0;height:25px;width:2px;background-color:rgba(0,0,0,.4);margin:3px}#editor{cursor:ew-resize;position:relative;z-index:auto}.profile-pic{float:left;width:250px}#_default_ a::before{color:#A0AABF}#_default_ img{display:none}#_default_ #_default_{display:block;float:left;max-width:38%;word-wrap:break-word}#_default_ .default-ad{display:none}#_default_ ._default_{display:block}#_default_ a{color:#35d7bb;text-decoration:none}#_default_ a:hover{color:#8ae8d8}#_default_ .default-image{display:none}#_default_ .default-title:after{content:" — "}#_default_ .default-title,#_default_ .default-text,#_default_ .default-description{display:inline}#_default_ .default-title{position:relative;font-weight:600;display:none}#_default_ a:before{position:relative;top:0;padding:5px;color:#a0aabf;content:"Ad";text-transform:uppercase;font-size:8px;font-family:Verdana,sans-serif}#_default_{display:block;float:left;max-width:38%;word-wrap:break-word}#_default_ ._default_{display:block;font-size:.75rem;height:51px;letter-spacing:1px;line-height:1rem;padding:18px 24px}body{max-width:1024px;margin:0 auto;overflow:auto;padding:2%}.split{overflow:scroll;padding:0!important;-webkit-overflow-scrolling:touch}.split-editor{padding-left:0;padding-right:0;position:relative;z-index:3}.show-preview .split-editor{display:none}.split-preview{background-color:#fff;display:none;top:0;position:relative;z-index:4}.show-preview .split-preview{display:block}#editor{font-size:1rem;font-family:"Ubuntu Mono",Monaco;font-weight:400;line-height:2rem;width:100%;height:100%}#editor .ace_gutter{-webkit-font-smoothing:antialiased}.editor-header{width:50%;float:left;border-bottom:1px solid #E8E8E8;position:relative}.editor-header--first{border-right:1px solid #E8E8E8}.editor-header .title{display:inline-block}.preview-html{padding:15px}.preview-html a{color:#A0AABF;text-decoration:underline}.preview-src{white-space:normal}.preview-mode-toggle-src{background-image:url("../img/icons/code.svg")}.preview-mode-toggle-src,.preview-mode-toggle-html{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0;background-repeat:no-repeat;width:32px;height:32px;display:block;position:absolute;right:.5rem;top:.5rem;display:none}.preview-mode-toggle-html{background-image:url("../img/icons/eye.svg")}.sr-only{visibility:hidden;text-overflow:110%;overflow:hidden;top:-100px;position:absolute}.mnone{margin:0!important}@media screen and (min-width:27.5em){html{font-size:.875em}body{font-size:1rem}ul,ol{margin-bottom:.83999rem;padding-top:.16001rem}p{padding-top:.66001rem}p,pre{margin-bottom:1.33999rem}pre,blockquote p{font-size:1rem;padding-top:.66001rem}blockquote p{margin-bottom:.33999rem}h1{font-size:2.0571429rem;margin-bottom:.21999rem;padding-top:.78001rem}h2{font-size:1.953125rem;margin-bottom:.1835837rem;padding-top:.8164163rem}h3{font-size:1.6457143rem;margin-bottom:.07599rem;padding-top:.92401rem}h4{font-size:1.5625rem;margin-bottom:.546865rem;padding-top:.453135rem}h5{font-size:1.25rem;margin-bottom:-.56251rem;padding-top:.56251rem}h6{font-size:1rem;margin-bottom:-.65001rem;padding-top:.65001rem}.g{margin-left:-16px;margin-right:-16px}.g-b{padding-left:16px;padding-right:16px}.g-b--m1of1{width:100%}.g-b--m1of2,.g-b--m2of4,.g-b--m3of6,.g-b--m4of8,.g-b--m5of10,.g-b--m6of12{width:50%}.g-b--m1of3,.g-b--m2of6,.g-b--m4of12{width:33.333%}.g-b--m2of3,.g-b--m4of6,.g-b--m8of12{width:66.666%}.g-b--m1of4,.g-b--m2of8,.g-b--m3of12{width:25%}.g-b--m3of4,.g-b--m6of8,.g-b--m9of12{width:75%}.g-b--m1of5,.g-b--m2of10{width:20%}.g-b--m2of5,.g-b--m4of10{width:40%}.g-b--m3of5,.g-b--m6of10{width:60%}.g-b--m4of5,.g-b--m8of10{width:80%}.g-b--m1of6,.g-b--m2of12{width:16.666%}.g-b--m5of6,.g-b--m10of12{width:83.333%}.g-b--m1of8{width:12.5%}.g-b--m3of8{width:37.5%}.g-b--m5of8{width:62.5%}.g-b--m7of8{width:87.5%}.g-b--m1of10{width:10%}.g-b--m3of10{width:30%}.g-b--m7of10{width:70%}.g-b--m9of10{width:90%}.g-b--m1of12{width:8.333%}.g-b--m5of12{width:41.666%}.g-b--m7of12{width:58.333%}.g-b--m11of12{width:91.666%}.g-b--push--m1of1{margin-left:100%}.g-b--push--m1of2,.g-b--push--m2of4,.g-b--push--m3of6,.g-b--push--m4of8,.g-b--push--m5of10,.g-b--push--m6of12{margin-left:50%}.g-b--push--m1of3,.g-b--push--m2of6,.g-b--push--m4of12{margin-left:33.333%}.g-b--push--m2of3,.g-b--push--m4of6,.g-b--push--m8of12{margin-left:66.666%}.g-b--push--m1of4,.g-b--push--m2of8,.g-b--push--m3of12{margin-left:25%}.g-b--push--m3of4,.g-b--push--m6of8,.g-b--push--m9of12{margin-left:75%}.g-b--push--m1of5,.g-b--push--m2of10{margin-left:20%}.g-b--push--m2of5,.g-b--push--m4of10{margin-left:40%}.g-b--push--m3of5,.g-b--push--m6of10{margin-left:60%}.g-b--push--m4of5,.g-b--push--m8of10{margin-left:80%}.g-b--push--m1of6,.g-b--push--m2of12{margin-left:16.666%}.g-b--push--m5of6,.g-b--push--m10of12{margin-left:83.333%}.g-b--push--m1of8{margin-left:12.5%}.g-b--push--m3of8{margin-left:37.5%}.g-b--push--m5of8{margin-left:62.5%}.g-b--push--m7of8{margin-left:87.5%}.g-b--push--m1of10{margin-left:10%}.g-b--push--m3of10{margin-left:30%}.g-b--push--m7of10{margin-left:70%}.g-b--push--m9of10{margin-left:90%}.g-b--push--m1of12{margin-left:8.333%}.g-b--push--m5of12{margin-left:41.666%}.g-b--push--m7of12{margin-left:58.333%}.g-b--push--m11of12{margin-left:91.666%}.g-b--pull--m1of1{margin-right:100%}.g-b--pull--m1of2,.g-b--pull--m2of4,.g-b--pull--m3of6,.g-b--pull--m4of8,.g-b--pull--m5of10,.g-b--pull--m6of12{margin-right:50%}.g-b--pull--m1of3,.g-b--pull--m2of6,.g-b--pull--m4of12{margin-right:33.333%}.g-b--pull--m2of3,.g-b--pull--m4of6,.g-b--pull--m8of12{margin-right:66.666%}.g-b--pull--m1of4,.g-b--pull--m2of8,.g-b--pull--m3of12{margin-right:25%}.g-b--pull--m3of4,.g-b--pull--m6of8,.g-b--pull--m9of12{margin-right:75%}.g-b--pull--m1of5,.g-b--pull--m2of10{margin-right:20%}.g-b--pull--m2of5,.g-b--pull--m4of10{margin-right:40%}.g-b--pull--m3of5,.g-b--pull--m6of10{margin-right:60%}.g-b--pull--m4of5,.g-b--pull--m8of10{margin-right:80%}.g-b--pull--m1of6,.g-b--pull--m2of12{margin-right:16.666%}.g-b--pull--m5of6,.g-b--pull--m10of12{margin-right:83.333%}.g-b--pull--m1of8{margin-right:12.5%}.g-b--pull--m3of8{margin-right:37.5%}.g-b--pull--m5of8{margin-right:62.5%}.g-b--pull--m7of8{margin-right:87.5%}.g-b--pull--m1of10{margin-right:10%}.g-b--pull--m3of10{margin-right:30%}.g-b--pull--m7of10{margin-right:70%}.g-b--pull--m9of10{margin-right:90%}.g-b--pull--m1of12{margin-right:8.333%}.g-b--pull--m5of12{margin-right:41.666%}.g-b--pull--m7of12{margin-right:58.333%}.g-b--pull--m11of12{margin-right:91.666%}.splashscreen p{font-size:1.25rem;margin-bottom:1.43749rem;padding-top:.56251rem}.title{font-size:.8rem;margin-bottom:.77999rem;padding-top:.22001rem}.title-document{margin-bottom:.89999rem;padding-top:.10001rem}.title-document,.settings a{font-size:1.25rem}.words,.characters{font-size:.8rem;margin-bottom:.77999rem;padding-top:.22001rem}.modal--dillinger.about .modal-dialog,#zen{font-size:1.25rem}#zen{width:400px}#editor{font-size:1rem}}@media screen and (min-width:46.25em){html{font-size:.875em}body{font-size:1rem}ul,ol{margin-bottom:.83999rem;padding-top:.16001rem}p{padding-top:.66001rem}p,pre{margin-bottom:1.33999rem}pre,blockquote p{font-size:1rem;padding-top:.66001rem}blockquote p{margin-bottom:.33999rem}h1{font-size:2.0571429rem;margin-bottom:.21999rem;padding-top:.78001rem}h2{font-size:1.953125rem;margin-bottom:.1835837rem;padding-top:.8164163rem}h3{font-size:1.6457143rem;margin-bottom:.07599rem;padding-top:.92401rem}h4{font-size:1.5625rem;margin-bottom:.546865rem;padding-top:.453135rem}h5{font-size:1.25rem;margin-bottom:-.56251rem;padding-top:.56251rem}h6{font-size:1rem;margin-bottom:-.65001rem;padding-top:.65001rem}.g{margin-left:-16px;margin-right:-16px}.g-b{padding-left:16px;padding-right:16px}.g-b--t1of1{width:100%}.g-b--t1of2,.g-b--t2of4,.g-b--t3of6,.g-b--t4of8,.g-b--t5of10,.g-b--t6of12{width:50%}.g-b--t1of3,.g-b--t2of6,.g-b--t4of12{width:33.333%}.g-b--t2of3,.g-b--t4of6,.g-b--t8of12{width:66.666%}.g-b--t1of4,.g-b--t2of8,.g-b--t3of12{width:25%}.g-b--t3of4,.g-b--t6of8,.g-b--t9of12{width:75%}.g-b--t1of5,.g-b--t2of10{width:20%}.g-b--t2of5,.g-b--t4of10{width:40%}.g-b--t3of5,.g-b--t6of10{width:60%}.g-b--t4of5,.g-b--t8of10{width:80%}.g-b--t1of6,.g-b--t2of12{width:16.666%}.g-b--t5of6,.g-b--t10of12{width:83.333%}.g-b--t1of8{width:12.5%}.g-b--t3of8{width:37.5%}.g-b--t5of8{width:62.5%}.g-b--t7of8{width:87.5%}.g-b--t1of10{width:10%}.g-b--t3of10{width:30%}.g-b--t7of10{width:70%}.g-b--t9of10{width:90%}.g-b--t1of12{width:8.333%}.g-b--t5of12{width:41.666%}.g-b--t7of12{width:58.333%}.g-b--t11of12{width:91.666%}.g-b--push--t1of1{margin-left:100%}.g-b--push--t1of2,.g-b--push--t2of4,.g-b--push--t3of6,.g-b--push--t4of8,.g-b--push--t5of10,.g-b--push--t6of12{margin-left:50%}.g-b--push--t1of3,.g-b--push--t2of6,.g-b--push--t4of12{margin-left:33.333%}.g-b--push--t2of3,.g-b--push--t4of6,.g-b--push--t8of12{margin-left:66.666%}.g-b--push--t1of4,.g-b--push--t2of8,.g-b--push--t3of12{margin-left:25%}.g-b--push--t3of4,.g-b--push--t6of8,.g-b--push--t9of12{margin-left:75%}.g-b--push--t1of5,.g-b--push--t2of10{margin-left:20%}.g-b--push--t2of5,.g-b--push--t4of10{margin-left:40%}.g-b--push--t3of5,.g-b--push--t6of10{margin-left:60%}.g-b--push--t4of5,.g-b--push--t8of10{margin-left:80%}.g-b--push--t1of6,.g-b--push--t2of12{margin-left:16.666%}.g-b--push--t5of6,.g-b--push--t10of12{margin-left:83.333%}.g-b--push--t1of8{margin-left:12.5%}.g-b--push--t3of8{margin-left:37.5%}.g-b--push--t5of8{margin-left:62.5%}.g-b--push--t7of8{margin-left:87.5%}.g-b--push--t1of10{margin-left:10%}.g-b--push--t3of10{margin-left:30%}.g-b--push--t7of10{margin-left:70%}.g-b--push--t9of10{margin-left:90%}.g-b--push--t1of12{margin-left:8.333%}.g-b--push--t5of12{margin-left:41.666%}.g-b--push--t7of12{margin-left:58.333%}.g-b--push--t11of12{margin-left:91.666%}.g-b--pull--t1of1{margin-right:100%}.g-b--pull--t1of2,.g-b--pull--t2of4,.g-b--pull--t3of6,.g-b--pull--t4of8,.g-b--pull--t5of10,.g-b--pull--t6of12{margin-right:50%}.g-b--pull--t1of3,.g-b--pull--t2of6,.g-b--pull--t4of12{margin-right:33.333%}.g-b--pull--t2of3,.g-b--pull--t4of6,.g-b--pull--t8of12{margin-right:66.666%}.g-b--pull--t1of4,.g-b--pull--t2of8,.g-b--pull--t3of12{margin-right:25%}.g-b--pull--t3of4,.g-b--pull--t6of8,.g-b--pull--t9of12{margin-right:75%}.g-b--pull--t1of5,.g-b--pull--t2of10{margin-right:20%}.g-b--pull--t2of5,.g-b--pull--t4of10{margin-right:40%}.g-b--pull--t3of5,.g-b--pull--t6of10{margin-right:60%}.g-b--pull--t4of5,.g-b--pull--t8of10{margin-right:80%}.g-b--pull--t1of6,.g-b--pull--t2of12{margin-right:16.666%}.g-b--pull--t5of6,.g-b--pull--t10of12{margin-right:83.333%}.g-b--pull--t1of8{margin-right:12.5%}.g-b--pull--t3of8{margin-right:37.5%}.g-b--pull--t5of8{margin-right:62.5%}.g-b--pull--t7of8{margin-right:87.5%}.g-b--pull--t1of10{margin-right:10%}.g-b--pull--t3of10{margin-right:30%}.g-b--pull--t7of10{margin-right:70%}.g-b--pull--t9of10{margin-right:90%}.g-b--pull--t1of12{margin-right:8.333%}.g-b--pull--t5of12{margin-right:41.666%}.g-b--pull--t7of12{margin-right:58.333%}.g-b--pull--t11of12{margin-right:91.666%}.splashscreen-dillinger{width:500px}.splashscreen p{font-size:1.25rem;margin-bottom:1.43749rem;padding-top:.56251rem}.title{font-size:.8rem;margin-bottom:.77999rem;padding-top:.22001rem}.title-document{font-size:1.25rem;margin-bottom:.89999rem;padding-top:.10001rem}.menu .menu-item--save-to,.menu .menu-item--import-from{display:block}.menu .menu-item--preview,.menu .menu-item--save-to.in-sidebar,.menu .menu-item--import-from.in-sidebar{display:none}.settings a{font-size:1.25rem}.words,.characters{font-size:.8rem;margin-bottom:.77999rem;padding-top:.22001rem}.modal--dillinger.about .modal-dialog{font-size:1.25rem}.enter-zen-mode{display:block}.close-zen-mode{right:3rem;top:3rem}#zen{font-size:1.25rem;width:500px}.split-editor{border-right:1px solid #E8E8E8;float:left;padding-right:16px;width:50%}.show-preview .split-editor{display:block}.split-preview{display:block;float:right;position:relative;top:0;width:50%}#editor{font-size:1rem}.preview-mode-toggle-src,.preview-mode-toggle-html{display:block}}@media screen and (min-width:62.5em){html{font-size:.875em}body{font-size:1rem}ul,ol{margin-bottom:.83999rem;padding-top:.16001rem}p{padding-top:.66001rem}p,pre{margin-bottom:1.33999rem}pre,blockquote p{font-size:1rem;padding-top:.66001rem}blockquote p{margin-bottom:.33999rem}h1{font-size:2.0571429rem;margin-bottom:.21999rem;padding-top:.78001rem}h2{font-size:1.953125rem;margin-bottom:.1835837rem;padding-top:.8164163rem}h3{font-size:1.6457143rem;margin-bottom:.07599rem;padding-top:.92401rem}h4{font-size:1.5625rem;margin-bottom:.546865rem;padding-top:.453135rem}h5{font-size:1.25rem;margin-bottom:-.56251rem;padding-top:.56251rem}h6{font-size:1rem;margin-bottom:-.65001rem;padding-top:.65001rem}.g{margin-left:-16px;margin-right:-16px}.g-b{padding-left:16px;padding-right:16px}.g-b--d1of1{width:100%}.g-b--d1of2,.g-b--d2of4,.g-b--d3of6,.g-b--d4of8,.g-b--d5of10,.g-b--d6of12{width:50%}.g-b--d1of3,.g-b--d2of6,.g-b--d4of12{width:33.333%}.g-b--d2of3,.g-b--d4of6,.g-b--d8of12{width:66.666%}.g-b--d1of4,.g-b--d2of8,.g-b--d3of12{width:25%}.g-b--d3of4,.g-b--d6of8,.g-b--d9of12{width:75%}.g-b--d1of5,.g-b--d2of10{width:20%}.g-b--d2of5,.g-b--d4of10{width:40%}.g-b--d3of5,.g-b--d6of10{width:60%}.g-b--d4of5,.g-b--d8of10{width:80%}.g-b--d1of6,.g-b--d2of12{width:16.666%}.g-b--d5of6,.g-b--d10of12{width:83.333%}.g-b--d1of8{width:12.5%}.g-b--d3of8{width:37.5%}.g-b--d5of8{width:62.5%}.g-b--d7of8{width:87.5%}.g-b--d1of10{width:10%}.g-b--d3of10{width:30%}.g-b--d7of10{width:70%}.g-b--d9of10{width:90%}.g-b--d1of12{width:8.333%}.g-b--d5of12{width:41.666%}.g-b--d7of12{width:58.333%}.g-b--d11of12{width:91.666%}.g-b--push--d1of1{margin-left:100%}.g-b--push--d1of2,.g-b--push--d2of4,.g-b--push--d3of6,.g-b--push--d4of8,.g-b--push--d5of10,.g-b--push--d6of12{margin-left:50%}.g-b--push--d1of3,.g-b--push--d2of6,.g-b--push--d4of12{margin-left:33.333%}.g-b--push--d2of3,.g-b--push--d4of6,.g-b--push--d8of12{margin-left:66.666%}.g-b--push--d1of4,.g-b--push--d2of8,.g-b--push--d3of12{margin-left:25%}.g-b--push--d3of4,.g-b--push--d6of8,.g-b--push--d9of12{margin-left:75%}.g-b--push--d1of5,.g-b--push--d2of10{margin-left:20%}.g-b--push--d2of5,.g-b--push--d4of10{margin-left:40%}.g-b--push--d3of5,.g-b--push--d6of10{margin-left:60%}.g-b--push--d4of5,.g-b--push--d8of10{margin-left:80%}.g-b--push--d1of6,.g-b--push--d2of12{margin-left:16.666%}.g-b--push--d5of6,.g-b--push--d10of12{margin-left:83.333%}.g-b--push--d1of8{margin-left:12.5%}.g-b--push--d3of8{margin-left:37.5%}.g-b--push--d5of8{margin-left:62.5%}.g-b--push--d7of8{margin-left:87.5%}.g-b--push--d1of10{margin-left:10%}.g-b--push--d3of10{margin-left:30%}.g-b--push--d7of10{margin-left:70%}.g-b--push--d9of10{margin-left:90%}.g-b--push--d1of12{margin-left:8.333%}.g-b--push--d5of12{margin-left:41.666%}.g-b--push--d7of12{margin-left:58.333%}.g-b--push--d11of12{margin-left:91.666%}.g-b--pull--d1of1{margin-right:100%}.g-b--pull--d1of2,.g-b--pull--d2of4,.g-b--pull--d3of6,.g-b--pull--d4of8,.g-b--pull--d5of10,.g-b--pull--d6of12{margin-right:50%}.g-b--pull--d1of3,.g-b--pull--d2of6,.g-b--pull--d4of12{margin-right:33.333%}.g-b--pull--d2of3,.g-b--pull--d4of6,.g-b--pull--d8of12{margin-right:66.666%}.g-b--pull--d1of4,.g-b--pull--d2of8,.g-b--pull--d3of12{margin-right:25%}.g-b--pull--d3of4,.g-b--pull--d6of8,.g-b--pull--d9of12{margin-right:75%}.g-b--pull--d1of5,.g-b--pull--d2of10{margin-right:20%}.g-b--pull--d2of5,.g-b--pull--d4of10{margin-right:40%}.g-b--pull--d3of5,.g-b--pull--d6of10{margin-right:60%}.g-b--pull--d4of5,.g-b--pull--d8of10{margin-right:80%}.g-b--pull--d1of6,.g-b--pull--d2of12{margin-right:16.666%}.g-b--pull--d5of6,.g-b--pull--d10of12{margin-right:83.333%}.g-b--pull--d1of8{margin-right:12.5%}.g-b--pull--d3of8{margin-right:37.5%}.g-b--pull--d5of8{margin-right:62.5%}.g-b--pull--d7of8{margin-right:87.5%}.g-b--pull--d1of10{margin-right:10%}.g-b--pull--d3of10{margin-right:30%}.g-b--pull--d7of10{margin-right:70%}.g-b--pull--d9of10{margin-right:90%}.g-b--pull--d1of12{margin-right:8.333%}.g-b--pull--d5of12{margin-right:41.666%}.g-b--pull--d7of12{margin-right:58.333%}.g-b--pull--d11of12{margin-right:91.666%}.splashscreen-dillinger{width:700px}.splashscreen p{font-size:1.25rem;margin-bottom:1.43749rem;padding-top:.56251rem}.title{font-size:.8rem;margin-bottom:.77999rem;padding-top:.22001rem}.title-document{font-size:1.25rem;margin-bottom:.89999rem;padding-top:.10001rem}.menu .menu-item--export-as{display:block}.menu .menu-item--preview{display:none}.settings a{font-size:1.25rem}.words,.characters{font-size:.8rem;margin-bottom:.77999rem;padding-top:.22001rem}.modal--dillinger.about .modal-dialog,#zen{font-size:1.25rem}#zen{width:700px}#editor{font-size:1rem}}@media screen and (min-width:87.5em){html{font-size:.875em}body{font-size:1rem}ul,ol{margin-bottom:.83999rem;padding-top:.16001rem}p{padding-top:.66001rem}p,pre{margin-bottom:1.33999rem}pre,blockquote p{font-size:1rem;padding-top:.66001rem}blockquote p{margin-bottom:.33999rem}h1{font-size:2.0571429rem;margin-bottom:.21999rem;padding-top:.78001rem}h2{font-size:1.953125rem;margin-bottom:.1835837rem;padding-top:.8164163rem}h3{font-size:1.6457143rem;margin-bottom:.07599rem;padding-top:.92401rem}h4{font-size:1.5625rem;margin-bottom:.546865rem;padding-top:.453135rem}h5{font-size:1.25rem;margin-bottom:-.56251rem;padding-top:.56251rem}h6{font-size:1rem;margin-bottom:-.65001rem;padding-top:.65001rem}.splashscreen-dillinger{width:800px}.splashscreen p{font-size:1.25rem;margin-bottom:1.43749rem;padding-top:.56251rem}.title{font-size:.8rem;margin-bottom:.77999rem;padding-top:.22001rem}.title-document{margin-bottom:.89999rem;padding-top:.10001rem}.title-document,.settings a{font-size:1.25rem}.words,.characters{font-size:.8rem;margin-bottom:.77999rem;padding-top:.22001rem}.modal--dillinger.about .modal-dialog,#zen{font-size:1.25rem}#editor{font-size:1rem}}@media (min-width:768px){.form-inline .form-group{display:inline-block;margin-bottom:0;vertical-align:middle}.form-inline .form-control{display:inline-block;width:auto;vertical-align:middle}.form-inline .input-group{display:inline-table;vertical-align:middle}.form-inline .input-group .input-group-addon,.form-inline .input-group .input-group-btn,.form-inline .input-group .form-control{width:auto}.form-inline .input-group>.form-control{width:100%}.form-inline .control-label{margin-bottom:0;vertical-align:middle}.form-inline .radio,.form-inline .checkbox{display:inline-block;margin-top:0;margin-bottom:0;vertical-align:middle}.form-inline .radio label,.form-inline .checkbox label{padding-left:0}.form-inline .radio input[type="radio"],.form-inline .checkbox input[type="checkbox"]{position:relative;margin-left:0}.form-inline .has-feedback .form-control-feedback{top:0}.form-horizontal .control-label{text-align:right;margin-bottom:0;padding-top:7px}.form-horizontal .form-group-lg .control-label{padding-top:14.3px}.form-horizontal .form-group-sm .control-label{padding-top:6px}.modal-dialog{width:600px;margin:30px auto}.modal-content{box-shadow:0 5px 15px rgba(0,0,0,.5)}.modal-sm{width:300px}}@media (min-width:992px){.modal-lg{width:900px}}@media screen and (max-width:1200px){#_default_{max-width:30%}#_default_ ._default_{font-size:.825rem;line-height:.875rem;padding:12px 12px 6px 24px;text-align:justify}}@media screen and (max-width:1100px){#_default_{max-width:27%}#_default_ ._default_{font-size:.8rem;line-height:.85rem;padding:12px 6px 6px 24px;text-align:justify}}@media screen and (max-width:1000px){#_default_{max-width:24%}#_default_ ._default_{font-size:.775rem;line-height:.8rem;padding:12px 6px 6px 24px;text-align:justify}}@media screen and (max-width:900px){#_default_{max-width:30%}}@media screen and (max-width:767px){.table-responsive{width:100%;margin-bottom:15px;overflow-y:hidden;overflow-x:auto;-ms-overflow-style:-ms-autohiding-scrollbar;border:1px solid #ddd;-webkit-overflow-scrolling:touch}.table-responsive>.table{margin-bottom:0}.table-responsive>.table>thead>tr>th,.table-responsive>.table>thead>tr>td,.table-responsive>.table>tbody>tr>th,.table-responsive>.table>tbody>tr>td,.table-responsive>.table>tfoot>tr>th,.table-responsive>.table>tfoot>tr>td{white-space:nowrap}.table-responsive>.table-bordered{border:0}.table-responsive>.table-bordered>thead>tr>th:first-child,.table-responsive>.table-bordered>thead>tr>td:first-child,.table-responsive>.table-bordered>tbody>tr>th:first-child,.table-responsive>.table-bordered>tbody>tr>td:first-child,.table-responsive>.table-bordered>tfoot>tr>th:first-child,.table-responsive>.table-bordered>tfoot>tr>td:first-child{border-left:0}.table-responsive>.table-bordered>thead>tr>th:last-child,.table-responsive>.table-bordered>thead>tr>td:last-child,.table-responsive>.table-bordered>tbody>tr>th:last-child,.table-responsive>.table-bordered>tbody>tr>td:last-child,.table-responsive>.table-bordered>tfoot>tr>th:last-child,.table-responsive>.table-bordered>tfoot>tr>td:last-child{border-right:0}.table-responsive>.table-bordered>tbody>tr:last-child>th,.table-responsive>.table-bordered>tbody>tr:last-child>td,.table-responsive>.table-bordered>tfoot>tr:last-child>th,.table-responsive>.table-bordered>tfoot>tr:last-child>td{border-bottom:0}}@media screen and (max-width:720px){#_default_{max-width:60%}#_default_ ._default_{font-size:.75rem;line-height:1rem;padding:12px 24px}}@media screen and (max-width:620px){#_default_{max-width:50%}#_default_ ._default_{font-size:.66rem;letter-spacing:1px;line-height:1rem;padding:10px 24px}}@media screen and (max-width:520px){#_default_ ._default_{font-size:.4rem;line-height:.875rem;padding:6px 12px 6px 24px;text-align:justify}}@media screen and (max-width:460px){#_default_{display:none}}@media screen and (max-width:46.1875em){.editor-header{display:none}.editor-header--first{display:block;width:100%}}</style></head><body id="preview">
+<h2 class="code-line" data-line-start=0 data-line-end=1 ><a id="1_Basics_Getting_Started_with_UiPath_Studio_0"></a><strong>1. Basics: Getting Started with UiPath Studio</strong></h2>
+<h3 class="code-line" data-line-start=2 data-line-end=3 ><a id="What_is_UiPath_Studio_2"></a><strong>What is UiPath Studio?</strong></h3>
+<ul>
+<li class="has-line-data" data-line-start="3" data-line-end="4"><strong>UiPath Studio</strong> is a low-code automation platform designed for building <strong>Robotic Process Automation (RPA)</strong> workflows.</li>
+<li class="has-line-data" data-line-start="4" data-line-end="6">Use <strong>drag-and-drop activities</strong> and code integrations to automate tasks.</li>
+</ul>
+<h3 class="code-line" data-line-start=6 data-line-end=7 ><a id="Steps_to_Install_and_Set_Up_6"></a><strong>Steps to Install and Set Up</strong></h3>
+<ol>
+<li class="has-line-data" data-line-start="7" data-line-end="8">Download UiPath Studio from <a href="https://www.uipath.com/">UiPath</a>.</li>
+<li class="has-line-data" data-line-start="8" data-line-end="9">Install it using the provided installer.</li>
+<li class="has-line-data" data-line-start="9" data-line-end="10">Log in with your UiPath account.</li>
+<li class="has-line-data" data-line-start="10" data-line-end="12">Choose <strong>Studio Profile</strong> for advanced features or <strong>StudioX</strong> for simpler, citizen-developer-focused features.</li>
+</ol>
+<hr>
+<h2 class="code-line" data-line-start=14 data-line-end=15 ><a id="2_The_UiPath_Interface_14"></a><strong>2. The UiPath Interface</strong></h2>
+<h3 class="code-line" data-line-start=16 data-line-end=17 ><a id="Key_Components_16"></a><strong>Key Components</strong></h3>
+<ul>
+<li class="has-line-data" data-line-start="17" data-line-end="18"><strong>Ribbon</strong>: Access tools like <code>Run</code>, <code>Debug</code>, <code>Publish</code>, etc.</li>
+<li class="has-line-data" data-line-start="18" data-line-end="19"><strong>Activities Panel</strong>: Drag and drop prebuilt activities for automation.</li>
+<li class="has-line-data" data-line-start="19" data-line-end="20"><strong>Properties Panel</strong>: Customize activity settings.</li>
+<li class="has-line-data" data-line-start="20" data-line-end="21"><strong>Project Panel</strong>: View files, dependencies, and settings in your project.</li>
+<li class="has-line-data" data-line-start="21" data-line-end="23"><strong>Output Panel</strong>: Displays log messages and errors during execution.</li>
+</ul>
+<h3 class="code-line" data-line-start=23 data-line-end=24 ><a id="Code_Example_Creating_a_New_Project_23"></a><strong>Code Example: Creating a New Project</strong></h3>
+<ol>
+<li class="has-line-data" data-line-start="24" data-line-end="25">Open UiPath Studio and click <strong>“New Project”</strong>.</li>
+<li class="has-line-data" data-line-start="25" data-line-end="28">Choose a project template:
+<ul>
+<li class="has-line-data" data-line-start="26" data-line-end="27"><strong>Process</strong>: For standard workflows.</li>
+<li class="has-line-data" data-line-start="27" data-line-end="28"><strong>Library</strong>: For reusable components.</li>
+</ul>
+</li>
+<li class="has-line-data" data-line-start="28" data-line-end="30">Configure the project name and location.</li>
+</ol>
+<hr>
+<h2 class="code-line" data-line-start=32 data-line-end=33 ><a id="3_Variables_and_Arguments_32"></a><strong>3. Variables and Arguments</strong></h2>
+<h3 class="code-line" data-line-start=34 data-line-end=35 ><a id="Code_Example_Creating_and_Using_Variables_34"></a><strong>Code Example: Creating and Using Variables</strong></h3>
+<pre><code class="has-line-data" data-line-start="36" data-line-end="40" class="language-uipath"># Create a variable called myString of type String.
+# Assign a value: &quot;Hello, UiPath!&quot;
+# Use it in a 'Write Line' activity to output the value.
+</code></pre>
+<h3 class="code-line" data-line-start=41 data-line-end=42 ><a id="Key_Concepts_41"></a><strong>Key Concepts</strong></h3>
+<ul>
+<li class="has-line-data" data-line-start="42" data-line-end="44"><strong>Variables</strong>: Store data within workflows.
+<ul>
+<li class="has-line-data" data-line-start="43" data-line-end="44">Common types: <code>String</code>, <code>Int32</code>, <code>Boolean</code>, <code>DataTable</code>.</li>
+</ul>
+</li>
+<li class="has-line-data" data-line-start="44" data-line-end="47"><strong>Arguments</strong>: Pass data between workflows.
+<ul>
+<li class="has-line-data" data-line-start="45" data-line-end="47">Directions: <code>In</code>, <code>Out</code>, <code>In/Out</code>.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 class="code-line" data-line-start=49 data-line-end=50 ><a id="4_Sequences_and_Flowcharts_49"></a><strong>4. Sequences and Flowcharts</strong></h2>
+<h3 class="code-line" data-line-start=51 data-line-end=52 ><a id="Code_Example_Basic_Sequence_51"></a><strong>Code Example: Basic Sequence</strong></h3>
+<pre><code class="has-line-data" data-line-start="53" data-line-end="57" class="language-uipath"># Create a Sequence.
+# Add a 'Message Box' activity with text: &quot;This is a sequence!&quot;.
+# Run the workflow.
+</code></pre>
+<h3 class="code-line" data-line-start=58 data-line-end=59 ><a id="Key_Concepts_58"></a><strong>Key Concepts</strong></h3>
+<ul>
+<li class="has-line-data" data-line-start="59" data-line-end="60"><strong>Sequences</strong>: Linear workflows, best for simple automations.</li>
+<li class="has-line-data" data-line-start="60" data-line-end="62"><strong>Flowcharts</strong>: Use decision nodes and loops for complex workflows.</li>
+</ul>
+<hr>
+<h2 class="code-line" data-line-start=64 data-line-end=65 ><a id="5_Recording_and_Screen_Scraping_64"></a><strong>5. Recording and Screen Scraping</strong></h2>
+<h3 class="code-line" data-line-start=66 data-line-end=67 ><a id="Code_Example_Desktop_Recording_66"></a><strong>Code Example: Desktop Recording</strong></h3>
+<ol>
+<li class="has-line-data" data-line-start="67" data-line-end="68">Open the <strong>Recording</strong> tab.</li>
+<li class="has-line-data" data-line-start="68" data-line-end="69">Choose <strong>Desktop Recording</strong>.</li>
+<li class="has-line-data" data-line-start="69" data-line-end="70">Perform actions on your screen (clicks, typing, etc.).</li>
+<li class="has-line-data" data-line-start="70" data-line-end="72">Stop recording to generate activities.</li>
+</ol>
+<h3 class="code-line" data-line-start=72 data-line-end=73 ><a id="Screen_Scraping_72"></a><strong>Screen Scraping</strong></h3>
+<ul>
+<li class="has-line-data" data-line-start="73" data-line-end="78">Extract text from screens using the <strong>Screen Scraping Wizard</strong>.<pre><code class="has-line-data" data-line-start="75" data-line-end="77" class="language-uipath"># Use Get Text activity to scrape text from an application.
+</code></pre>
+</li>
+</ul>
+<hr>
+<h2 class="code-line" data-line-start=80 data-line-end=81 ><a id="6_Control_Flow_80"></a><strong>6. Control Flow</strong></h2>
+<h3 class="code-line" data-line-start=82 data-line-end=83 ><a id="Code_Example_IfElse_Decision_82"></a><strong>Code Example: If/Else Decision</strong></h3>
+<pre><code class="has-line-data" data-line-start="84" data-line-end="89" class="language-uipath"># Add an 'If' activity.
+# Condition: myVariable &gt; 10
+# Then: Display &quot;Value is greater than 10&quot;.
+# Else: Display &quot;Value is less than or equal to 10&quot;.
+</code></pre>
+<h3 class="code-line" data-line-start=90 data-line-end=91 ><a id="Key_Concepts_90"></a><strong>Key Concepts</strong></h3>
+<ul>
+<li class="has-line-data" data-line-start="91" data-line-end="92"><strong>If/Else</strong>: For conditional logic.</li>
+<li class="has-line-data" data-line-start="92" data-line-end="93"><strong>Switch</strong>: Handles multiple conditions.</li>
+<li class="has-line-data" data-line-start="93" data-line-end="94"><strong>For Each</strong>: Iterate through collections like arrays or lists.</li>
+<li class="has-line-data" data-line-start="94" data-line-end="96"><strong>While/Do While</strong>: Repeat logic based on a condition.</li>
+</ul>
+<hr>
+<h2 class="code-line" data-line-start=98 data-line-end=99 ><a id="7_Excel_Automation_98"></a><strong>7. Excel Automation</strong></h2>
+<h3 class="code-line" data-line-start=100 data-line-end=101 ><a id="Code_Example_Read_and_Write_Excel_Data_100"></a><strong>Code Example: Read and Write Excel Data</strong></h3>
+<pre><code class="has-line-data" data-line-start="102" data-line-end="107" class="language-uipath"># Add an 'Excel Application Scope' activity.
+# Specify the Excel file path.
+# Use 'Read Range' to read data into a DataTable.
+# Use 'Write Range' to export the DataTable to a new sheet.
+</code></pre>
+<h3 class="code-line" data-line-start=108 data-line-end=109 ><a id="Key_Concepts_108"></a><strong>Key Concepts</strong></h3>
+<ul>
+<li class="has-line-data" data-line-start="109" data-line-end="110"><strong>Excel Activities</strong>: Automate Excel tasks like reading/writing data, formatting, and formulas.</li>
+<li class="has-line-data" data-line-start="110" data-line-end="112"><strong>DataTable</strong>: Use for processing tabular data.</li>
+</ul>
+<hr>
+<h2 class="code-line" data-line-start=114 data-line-end=115 ><a id="8_File_and_Folder_Automation_114"></a><strong>8. File and Folder Automation</strong></h2>
+<h3 class="code-line" data-line-start=116 data-line-end=117 ><a id="Code_Example_Manipulating_Files_116"></a><strong>Code Example: Manipulating Files</strong></h3>
+<pre><code class="has-line-data" data-line-start="118" data-line-end="122" class="language-uipath"># Use 'Move File' activity to move a file to a new folder.
+# Source: &quot;C:\temp\file.txt&quot;
+# Destination: &quot;C:\archive\file.txt&quot;
+</code></pre>
+<h3 class="code-line" data-line-start=123 data-line-end=124 ><a id="Key_Concepts_123"></a><strong>Key Concepts</strong></h3>
+<ul>
+<li class="has-line-data" data-line-start="124" data-line-end="129">Common activities:
+<ul>
+<li class="has-line-data" data-line-start="125" data-line-end="126"><strong>Create File/Folder</strong></li>
+<li class="has-line-data" data-line-start="126" data-line-end="127"><strong>Copy File/Folder</strong></li>
+<li class="has-line-data" data-line-start="127" data-line-end="129"><strong>Delete File/Folder</strong></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 class="code-line" data-line-start=131 data-line-end=132 ><a id="9_Data_Scraping_131"></a><strong>9. Data Scraping</strong></h2>
+<h3 class="code-line" data-line-start=133 data-line-end=134 ><a id="Code_Example_Extract_Table_Data_133"></a><strong>Code Example: Extract Table Data</strong></h3>
+<ol>
+<li class="has-line-data" data-line-start="134" data-line-end="135">Open the <strong>Data Scraping Wizard</strong>.</li>
+<li class="has-line-data" data-line-start="135" data-line-end="136">Select a table from a website or application.</li>
+<li class="has-line-data" data-line-start="136" data-line-end="138">Configure columns and preview extracted data.</li>
+</ol>
+<h3 class="code-line" data-line-start=138 data-line-end=139 ><a id="Key_Concepts_138"></a><strong>Key Concepts</strong></h3>
+<ul>
+<li class="has-line-data" data-line-start="139" data-line-end="141">Extract structured data from web pages or applications into DataTables.</li>
+</ul>
+<hr>
+<h2 class="code-line" data-line-start=143 data-line-end=144 ><a id="10_Orchestrator_Integration_143"></a><strong>10. Orchestrator Integration</strong></h2>
+<h3 class="code-line" data-line-start=145 data-line-end=146 ><a id="Key_Concepts_145"></a><strong>Key Concepts</strong></h3>
+<ul>
+<li class="has-line-data" data-line-start="146" data-line-end="147"><strong>UiPath Orchestrator</strong>: Manage, schedule, and monitor automation workflows.</li>
+<li class="has-line-data" data-line-start="147" data-line-end="152">Steps to connect:
+<ol>
+<li class="has-line-data" data-line-start="148" data-line-end="149">Configure <strong>Robot</strong> in Orchestrator.</li>
+<li class="has-line-data" data-line-start="149" data-line-end="150">Copy the machine key.</li>
+<li class="has-line-data" data-line-start="150" data-line-end="152">Paste the machine key in UiPath Assistant.</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h2 class="code-line" data-line-start=154 data-line-end=155 ><a id="11_Error_Handling_154"></a><strong>11. Error Handling</strong></h2>
+<h3 class="code-line" data-line-start=156 data-line-end=157 ><a id="Code_Example_TryCatch_156"></a><strong>Code Example: Try/Catch</strong></h3>
+<pre><code class="has-line-data" data-line-start="158" data-line-end="162" class="language-uipath"># Add a 'Try Catch' activity.
+# Place risky activities inside the 'Try' block.
+# Use the 'Catch' block to log or handle exceptions.
+</code></pre>
+<h3 class="code-line" data-line-start=163 data-line-end=164 ><a id="Key_Concepts_163"></a><strong>Key Concepts</strong></h3>
+<ul>
+<li class="has-line-data" data-line-start="164" data-line-end="165"><strong>Try/Catch</strong>: Handles exceptions gracefully.</li>
+<li class="has-line-data" data-line-start="165" data-line-end="166"><strong>Throw</strong>: Manually raise an exception.</li>
+<li class="has-line-data" data-line-start="166" data-line-end="168"><strong>Retry Scope</strong>: Retry activities until a condition is met.</li>
+</ul>
+<hr>
+<h2 class="code-line" data-line-start=170 data-line-end=171 ><a id="12_Debugging_170"></a><strong>12. Debugging</strong></h2>
+<h3 class="code-line" data-line-start=172 data-line-end=173 ><a id="Key_Concepts_172"></a><strong>Key Concepts</strong></h3>
+<ul>
+<li class="has-line-data" data-line-start="173" data-line-end="174">Use the <strong>Debug</strong> button to step through workflows.</li>
+<li class="has-line-data" data-line-start="174" data-line-end="179">Tools:
+<ul>
+<li class="has-line-data" data-line-start="175" data-line-end="176"><strong>Breakpoints</strong>: Pause workflow execution at specific points.</li>
+<li class="has-line-data" data-line-start="176" data-line-end="177"><strong>Output Panel</strong>: View logs and error messages.</li>
+<li class="has-line-data" data-line-start="177" data-line-end="179"><strong>Locals Panel</strong>: Inspect variable values during execution.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 class="code-line" data-line-start=181 data-line-end=182 ><a id="13_Web_Automation_181"></a><strong>13. Web Automation</strong></h2>
+<h3 class="code-line" data-line-start=183 data-line-end=184 ><a id="Code_Example_Open_a_Browser_and_Interact_183"></a><strong>Code Example: Open a Browser and Interact</strong></h3>
+<pre><code class="has-line-data" data-line-start="185" data-line-end="190" class="language-uipath"># Use 'Open Browser' activity.
+# URL: &quot;https://example.com&quot;
+# Use 'Type Into' to enter text into a search box.
+# Use 'Click' to click the search button.
+</code></pre>
+<h3 class="code-line" data-line-start=191 data-line-end=192 ><a id="Key_Concepts_191"></a><strong>Key Concepts</strong></h3>
+<ul>
+<li class="has-line-data" data-line-start="192" data-line-end="194">Automate web-based tasks using UI automation activities.</li>
+</ul>
+<hr>
+<h2 class="code-line" data-line-start=196 data-line-end=197 ><a id="14_Invoke_Code_and_Invoke_Workflow_196"></a><strong>14. Invoke Code and Invoke Workflow</strong></h2>
+<h3 class="code-line" data-line-start=198 data-line-end=199 ><a id="Code_Example_Invoke_Code_198"></a><strong>Code Example: Invoke Code</strong></h3>
+<pre><code class="has-line-data" data-line-start="200" data-line-end="203" class="language-csharp"><span class="hljs-comment">// Example: Multiply two numbers in C#</span>
+<span class="hljs-keyword">int</span> result = a * b;
+</code></pre>
+<h3 class="code-line" data-line-start=204 data-line-end=205 ><a id="Invoke_Workflow_204"></a><strong>Invoke Workflow</strong></h3>
+<ul>
+<li class="has-line-data" data-line-start="205" data-line-end="207">Reuse workflows by invoking them with arguments.</li>
+</ul>
+<hr>
+<h2 class="code-line" data-line-start=209 data-line-end=210 ><a id="15_UI_Automation_209"></a><strong>15. UI Automation</strong></h2>
+<h3 class="code-line" data-line-start=211 data-line-end=212 ><a id="Code_Example_Click_a_Button_211"></a><strong>Code Example: Click a Button</strong></h3>
+<pre><code class="has-line-data" data-line-start="213" data-line-end="216" class="language-uipath"># Use the 'Click' activity.
+# Indicate the button using UI Explorer.
+</code></pre>
+<h3 class="code-line" data-line-start=217 data-line-end=218 ><a id="Key_Concepts_217"></a><strong>Key Concepts</strong></h3>
+<ul>
+<li class="has-line-data" data-line-start="218" data-line-end="219"><strong>Selectors</strong>: Identify UI elements dynamically or statically.</li>
+<li class="has-line-data" data-line-start="219" data-line-end="221"><strong>Anchor Base</strong>: Automates elements relative to another.</li>
+</ul>
+<hr>
+<h2 class="code-line" data-line-start=223 data-line-end=224 ><a id="16_Library_Creation_223"></a><strong>16. Library Creation</strong></h2>
+<h3 class="code-line" data-line-start=225 data-line-end=226 ><a id="Code_Example_Create_a_Custom_Library_225"></a><strong>Code Example: Create a Custom Library</strong></h3>
+<ol>
+<li class="has-line-data" data-line-start="226" data-line-end="227">Create a <strong>Library</strong> project in UiPath Studio.</li>
+<li class="has-line-data" data-line-start="227" data-line-end="228">Add reusable workflows or components.</li>
+<li class="has-line-data" data-line-start="228" data-line-end="230">Publish the library to a feed.</li>
+</ol>
+<h3 class="code-line" data-line-start=230 data-line-end=231 ><a id="Key_Concepts_230"></a><strong>Key Concepts</strong></h3>
+<ul>
+<li class="has-line-data" data-line-start="231" data-line-end="233">Libraries make workflows modular and reusable.</li>
+</ul>
+<hr>
+<h2 class="code-line" data-line-start=235 data-line-end=236 ><a id="17_Advanced_Activities_235"></a><strong>17. Advanced Activities</strong></h2>
+<h3 class="code-line" data-line-start=237 data-line-end=238 ><a id="Code_Example_Regex_for_Text_Extraction_237"></a><strong>Code Example: Regex for Text Extraction</strong></h3>
+<pre><code class="has-line-data" data-line-start="239" data-line-end="241" class="language-uipath"># Use 'Matches' activity with pattern &quot;\d{3}-\d{2}-\d{4}&quot; to extract SSNs.
+</code></pre>
+<h3 class="code-line" data-line-start=242 data-line-end=243 ><a id="Key_Concepts_242"></a><strong>Key Concepts</strong></h3>
+<ul>
+<li class="has-line-data" data-line-start="243" data-line-end="248">Use advanced activities like:
+<ul>
+<li class="has-line-data" data-line-start="244" data-line-end="245"><strong>Matches</strong> (Regex)</li>
+<li class="has-line-data" data-line-start="245" data-line-end="246"><strong>Invoke Code</strong></li>
+<li class="has-line-data" data-line-start="246" data-line-end="248"><strong>Invoke Python Script</strong></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 class="code-line" data-line-start=250 data-line-end=251 ><a id="18_Git_Integration_250"></a><strong>18. Git Integration</strong></h2>
+<h3 class="code-line" data-line-start=252 data-line-end=253 ><a id="Code_Example_Version_Control_in_UiPath_252"></a><strong>Code Example: Version Control in UiPath</strong></h3>
+<ol>
+<li class="has-line-data" data-line-start="253" data-line-end="254">Initialize Git in the project folder.</li>
+<li class="has-line-data" data-line-start="254" data-line-end="255">Use <code>Commit</code>, <code>Push</code>, and <code>Pull</code> options from the UiPath Studio menu.</li>
+<li class="has-line-data" data-line-start="255" data-line-end="257">Resolve merge conflicts manually or with tools.</li>
+</ol>
+<hr>
+<h2 class="code-line" data-line-start=259 data-line-end=260 ><a id="19_Best_Practices_259"></a><strong>19. Best Practices</strong></h2>
+<ol>
+<li class="has-line-data" data-line-start="261" data-line-end="262"><strong>Name Activities Clearly</strong>: Use descriptive names for activities and variables.</li>
+<li class="has-line-data" data-line-start="262" data-line-end="263"><strong>Use Annotations</strong>: Add comments to workflows.</li>
+<li class="has-line-data" data-line-start="263" data-line-end="264"><strong>Organize Workflows</strong>: Split large workflows into smaller, reusable components.</li>
+<li class="has-line-data" data-line-start="264" data-line-end="265"><strong>Error Handling</strong>: Always implement Try/Catch for robust workflows.</li>
+<li class="has-line-data" data-line-start="265" data-line-end="267"><strong>Optimize Selectors</strong>: Use dynamic selectors for reliable automation.</li>
+</ol>
+<hr>
+<h2 class="code-line" data-line-start=269 data-line-end=270 ><a id="20_Resources_269"></a><strong>20. Resources</strong></h2>
+<ol>
+<li class="has-line-data" data-line-start="271" data-line-end="272"><strong>UiPath Academy</strong>: <a href="https://academy.uipath.com/">https://academy.uipath.com/</a></li>
+<li class="has-line-data" data-line-start="272" data-line-end="273"><strong>UiPath Documentation</strong>: <a href="https://docs.uipath.com/">https://docs.uipath.com/</a></li>
+<li class="has-line-data" data-line-start="273" data-line-end="274"><strong>UiPath Community Forum</strong>: <a href="https://forum.uipath.com/">https://forum.uipath.com/</a></li>
+<li class="has-line-data" data-line-start="274" data-line-end="276"><strong>RPA Best Practices</strong>: <a href="https://www.uipath.com/solutions/rpa">UiPath RPA Best Practices</a></li>
+</ol>
+<hr>
+<h2 class="code-line" data-line-start=277 data-line-end=278 ><a id="21_Workflow_Types_277"></a><strong>21. Workflow Types</strong></h2>
+<h3 class="code-line" data-line-start=279 data-line-end=280 ><a id="Types_of_Workflows_in_UiPath_Studio_279"></a><strong>Types of Workflows in UiPath Studio</strong></h3>
+<ol>
+<li class="has-line-data" data-line-start="280" data-line-end="283"><strong>Sequence</strong>:
+<ul>
+<li class="has-line-data" data-line-start="281" data-line-end="282">Linear and straightforward for simple automations.</li>
+<li class="has-line-data" data-line-start="282" data-line-end="283">Best for tasks like data processing or UI interaction.</li>
+</ul>
+</li>
+<li class="has-line-data" data-line-start="283" data-line-end="286"><strong>Flowchart</strong>:
+<ul>
+<li class="has-line-data" data-line-start="284" data-line-end="285">Non-linear workflows with decision-making and branching.</li>
+<li class="has-line-data" data-line-start="285" data-line-end="286">Suitable for complex logic like handling multiple decision paths.</li>
+</ul>
+</li>
+<li class="has-line-data" data-line-start="286" data-line-end="290"><strong>State Machine</strong>:
+<ul>
+<li class="has-line-data" data-line-start="287" data-line-end="288">Event-driven workflows with defined states and transitions.</li>
+<li class="has-line-data" data-line-start="288" data-line-end="290">Ideal for processes with well-defined phases or states, such as login workflows or approval cycles.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 class="code-line" data-line-start=292 data-line-end=293 ><a id="22_Custom_Activities_292"></a><strong>22. Custom Activities</strong></h2>
+<h3 class="code-line" data-line-start=294 data-line-end=295 ><a id="What_Are_Custom_Activities_294"></a><strong>What Are Custom Activities?</strong></h3>
+<p class="has-line-data" data-line-start="295" data-line-end="296">Custom activities are reusable components that extend UiPath’s functionality.</p>
+<h3 class="code-line" data-line-start=297 data-line-end=298 ><a id="Code_Example_Creating_a_Custom_Activity_297"></a><strong>Code Example: Creating a Custom Activity</strong></h3>
+<ol>
+<li class="has-line-data" data-line-start="298" data-line-end="299">Create a library project in UiPath Studio.</li>
+<li class="has-line-data" data-line-start="299" data-line-end="300">Add a workflow and publish it.</li>
+<li class="has-line-data" data-line-start="300" data-line-end="302">Import the library into other projects.</li>
+</ol>
+<h3 class="code-line" data-line-start=302 data-line-end=303 ><a id="Using_Custom_Activities_302"></a><strong>Using Custom Activities</strong></h3>
+<ul>
+<li class="has-line-data" data-line-start="303" data-line-end="304">Install custom libraries via the <strong>Manage Packages</strong> window.</li>
+<li class="has-line-data" data-line-start="304" data-line-end="306">Add the custom activity from the Activities Panel.</li>
+</ul>
+<hr>
+<h2 class="code-line" data-line-start=308 data-line-end=309 ><a id="23_Asset_Management_in_Orchestrator_308"></a><strong>23. Asset Management in Orchestrator</strong></h2>
+<h3 class="code-line" data-line-start=310 data-line-end=311 ><a id="What_Are_Assets_310"></a><strong>What Are Assets?</strong></h3>
+<p class="has-line-data" data-line-start="311" data-line-end="312">Assets store shared variables like credentials, URLs, or file paths for use across robots.</p>
+<h3 class="code-line" data-line-start=313 data-line-end=314 ><a id="Steps_to_Use_Assets_in_Workflows_313"></a><strong>Steps to Use Assets in Workflows</strong></h3>
+<ol>
+<li class="has-line-data" data-line-start="314" data-line-end="315">Create assets in UiPath Orchestrator (e.g., credentials or strings).</li>
+<li class="has-line-data" data-line-start="315" data-line-end="317">Use the <strong>Get Asset</strong> or <strong>Get Credential</strong> activity in your workflow.</li>
+</ol>
+<h3 class="code-line" data-line-start=317 data-line-end=318 ><a id="Key_Example_317"></a><strong>Key Example</strong>:</h3>
+<pre><code class="has-line-data" data-line-start="319" data-line-end="322" class="language-uipath"># Use 'Get Asset' to retrieve a value stored in Orchestrator.
+assetValue = Get Asset(&quot;AssetName&quot;)
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=325 data-line-end=326 ><a id="24_Logging_and_Monitoring_325"></a><strong>24. Logging and Monitoring</strong></h2>
+<h3 class="code-line" data-line-start=327 data-line-end=328 ><a id="Logging_with_Log_Message_Activity_327"></a><strong>Logging with Log Message Activity</strong></h3>
+<pre><code class="has-line-data" data-line-start="329" data-line-end="333" class="language-uipath"># Add a Log Message activity.
+# Level: Info
+# Message: &quot;Process started successfully.&quot;
+</code></pre>
+<h3 class="code-line" data-line-start=334 data-line-end=335 ><a id="Key_Concepts_334"></a><strong>Key Concepts</strong></h3>
+<ul>
+<li class="has-line-data" data-line-start="335" data-line-end="340">Log Levels:
+<ul>
+<li class="has-line-data" data-line-start="336" data-line-end="337"><strong>Trace</strong>: Fine-grained debug details.</li>
+<li class="has-line-data" data-line-start="337" data-line-end="338"><strong>Info</strong>: General process information.</li>
+<li class="has-line-data" data-line-start="338" data-line-end="339"><strong>Warning</strong>: Non-critical issues.</li>
+<li class="has-line-data" data-line-start="339" data-line-end="340"><strong>Error</strong>: Critical failures in the workflow.</li>
+</ul>
+</li>
+<li class="has-line-data" data-line-start="340" data-line-end="342">Use Orchestrator’s <strong>Logs Panel</strong> to monitor workflow logs.</li>
+</ul>
+<hr>
+<h2 class="code-line" data-line-start=344 data-line-end=345 ><a id="25_Scheduled_Automation_344"></a><strong>25. Scheduled Automation</strong></h2>
+<h3 class="code-line" data-line-start=346 data-line-end=347 ><a id="How_to_Schedule_Jobs_in_Orchestrator_346"></a><strong>How to Schedule Jobs in Orchestrator</strong></h3>
+<ol>
+<li class="has-line-data" data-line-start="347" data-line-end="348">Navigate to <strong>Triggers</strong> in Orchestrator.</li>
+<li class="has-line-data" data-line-start="348" data-line-end="349">Create a trigger and select the process to schedule.</li>
+<li class="has-line-data" data-line-start="349" data-line-end="351">Configure the schedule (e.g., daily at 9 AM).</li>
+</ol>
+<h3 class="code-line" data-line-start=351 data-line-end=352 ><a id="Key_Example_351"></a><strong>Key Example</strong></h3>
+<ul>
+<li class="has-line-data" data-line-start="352" data-line-end="357"><strong>CRON Expressions</strong>: Use for advanced scheduling.<pre><code class="has-line-data" data-line-start="354" data-line-end="356" class="language-cron">0 9 * * *  # Run daily at 9 AM
+</code></pre>
+</li>
+</ul>
+<hr>
+<h2 class="code-line" data-line-start=359 data-line-end=360 ><a id="26_Using_Queues_359"></a><strong>26. Using Queues</strong></h2>
+<h3 class="code-line" data-line-start=361 data-line-end=362 ><a id="What_Are_Queues_361"></a><strong>What Are Queues?</strong></h3>
+<p class="has-line-data" data-line-start="362" data-line-end="363">Queues store transaction data for processes, enabling parallel execution and retry logic.</p>
+<h3 class="code-line" data-line-start=364 data-line-end=365 ><a id="Code_Example_Adding_Items_to_a_Queue_364"></a><strong>Code Example: Adding Items to a Queue</strong></h3>
+<pre><code class="has-line-data" data-line-start="366" data-line-end="370" class="language-uipath"># Use 'Add Queue Item' activity to add data to a queue.
+# Queue Name: &quot;InvoiceProcessingQueue&quot;
+# Specific Content: { &quot;InvoiceNumber&quot;: &quot;12345&quot;, &quot;Amount&quot;: 100 }
+</code></pre>
+<h3 class="code-line" data-line-start=371 data-line-end=372 ><a id="Processing_Items_from_a_Queue_371"></a><strong>Processing Items from a Queue</strong></h3>
+<ul>
+<li class="has-line-data" data-line-start="372" data-line-end="373">Use <strong>Get Transaction Item</strong> to retrieve items from the queue.</li>
+<li class="has-line-data" data-line-start="373" data-line-end="375">Use <strong>Set Transaction Status</strong> to mark items as successful or failed.</li>
+</ul>
+<hr>
+<h2 class="code-line" data-line-start=377 data-line-end=378 ><a id="27_Robot_Types_377"></a><strong>27. Robot Types</strong></h2>
+<h3 class="code-line" data-line-start=379 data-line-end=380 ><a id="Key_Robot_Types_in_UiPath_379"></a><strong>Key Robot Types in UiPath</strong></h3>
+<ol>
+<li class="has-line-data" data-line-start="380" data-line-end="383"><strong>Attended Robots</strong>:
+<ul>
+<li class="has-line-data" data-line-start="381" data-line-end="382">Run with human supervision.</li>
+<li class="has-line-data" data-line-start="382" data-line-end="383">Triggered manually, often used for front-office tasks.</li>
+</ul>
+</li>
+<li class="has-line-data" data-line-start="383" data-line-end="386"><strong>Unattended Robots</strong>:
+<ul>
+<li class="has-line-data" data-line-start="384" data-line-end="385">Run autonomously in the background.</li>
+<li class="has-line-data" data-line-start="385" data-line-end="386">Used for back-office operations.</li>
+</ul>
+</li>
+<li class="has-line-data" data-line-start="386" data-line-end="388"><strong>Studio Robots</strong>:
+<ul>
+<li class="has-line-data" data-line-start="387" data-line-end="388">Execute workflows during development and debugging.</li>
+</ul>
+</li>
+<li class="has-line-data" data-line-start="388" data-line-end="391"><strong>Test Robots</strong>:
+<ul>
+<li class="has-line-data" data-line-start="389" data-line-end="391">Designed specifically for executing automated test cases.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 class="code-line" data-line-start=393 data-line-end=394 ><a id="28_Advanced_Selectors_393"></a><strong>28. Advanced Selectors</strong></h2>
+<h3 class="code-line" data-line-start=395 data-line-end=396 ><a id="What_Are_Selectors_395"></a><strong>What Are Selectors?</strong></h3>
+<p class="has-line-data" data-line-start="396" data-line-end="397">Selectors are XML-based strings that identify UI elements.</p>
+<h3 class="code-line" data-line-start=398 data-line-end=399 ><a id="Key_Example_Dynamic_Selectors_398"></a><strong>Key Example: Dynamic Selectors</strong></h3>
+<pre><code class="has-line-data" data-line-start="400" data-line-end="403" class="language-uipath"># Example dynamic selector with variable
+&quot;&lt;html title='*&quot; + PageTitle + &quot;*' /&gt;&quot;
+</code></pre>
+<h3 class="code-line" data-line-start=404 data-line-end=405 ><a id="Tools_for_Optimizing_Selectors_404"></a><strong>Tools for Optimizing Selectors</strong></h3>
+<ul>
+<li class="has-line-data" data-line-start="405" data-line-end="406"><strong>UI Explorer</strong>: Refine and test selectors.</li>
+<li class="has-line-data" data-line-start="406" data-line-end="408"><strong>Anchor Base</strong>: Use a fixed element as a reference for dynamic elements.</li>
+</ul>
+<hr>
+<h2 class="code-line" data-line-start=410 data-line-end=411 ><a id="29_Exception_Handling_Best_Practices_410"></a><strong>29. Exception Handling Best Practices</strong></h2>
+<h3 class="code-line" data-line-start=412 data-line-end=413 ><a id="Enhanced_Exception_Handling_412"></a><strong>Enhanced Exception Handling</strong></h3>
+<ul>
+<li class="has-line-data" data-line-start="413" data-line-end="414">Use <code>Try Catch</code> blocks for predictable errors.</li>
+<li class="has-line-data" data-line-start="414" data-line-end="418"><strong>Global Exception Handler</strong>:
+<ul>
+<li class="has-line-data" data-line-start="415" data-line-end="416">Automatically handles uncaught exceptions.</li>
+<li class="has-line-data" data-line-start="416" data-line-end="418">Configure it under the Project Panel.</li>
+</ul>
+</li>
+</ul>
+<h3 class="code-line" data-line-start=418 data-line-end=419 ><a id="Retry_Logic_418"></a><strong>Retry Logic</strong></h3>
+<ul>
+<li class="has-line-data" data-line-start="419" data-line-end="421">Use <strong>Retry Scope</strong> for actions prone to transient errors (e.g., network issues).</li>
+</ul>
+<hr>
+<h2 class="code-line" data-line-start=423 data-line-end=424 ><a id="30_Credential_Management_423"></a><strong>30. Credential Management</strong></h2>
+<h3 class="code-line" data-line-start=425 data-line-end=426 ><a id="Key_Concepts_425"></a><strong>Key Concepts</strong></h3>
+<ul>
+<li class="has-line-data" data-line-start="426" data-line-end="427">Use <strong>Windows Credential Manager</strong> for local credential storage.</li>
+<li class="has-line-data" data-line-start="427" data-line-end="429">Use <strong>Orchestrator Assets</strong> for secure credential sharing.</li>
+</ul>
+<h3 class="code-line" data-line-start=429 data-line-end=430 ><a id="Code_Example_Get_Credentials_429"></a><strong>Code Example: Get Credentials</strong></h3>
+<pre><code class="has-line-data" data-line-start="431" data-line-end="435" class="language-uipath"># Use 'Get Credential' to retrieve credentials.
+username = Get Credential(&quot;MyCredential&quot;).Username
+password = Get Credential(&quot;MyCredential&quot;).Password
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=438 data-line-end=439 ><a id="31_Integration_with_APIs_438"></a><strong>31. Integration with APIs</strong></h2>
+<h3 class="code-line" data-line-start=440 data-line-end=441 ><a id="Code_Example_HTTP_Request_440"></a><strong>Code Example: HTTP Request</strong></h3>
+<ol>
+<li class="has-line-data" data-line-start="441" data-line-end="442">Use the <strong>HTTP Request</strong> activity to call APIs.</li>
+<li class="has-line-data" data-line-start="442" data-line-end="447">Configure:
+<ul>
+<li class="has-line-data" data-line-start="443" data-line-end="444">Endpoint URL.</li>
+<li class="has-line-data" data-line-start="444" data-line-end="445">Headers (e.g., <code>Authorization: Bearer token</code>).</li>
+<li class="has-line-data" data-line-start="445" data-line-end="447">Body for POST requests.</li>
+</ul>
+</li>
+</ol>
+<h3 class="code-line" data-line-start=447 data-line-end=448 ><a id="Key_Example_447"></a><strong>Key Example</strong>:</h3>
+<pre><code class="has-line-data" data-line-start="449" data-line-end="455" class="language-json"># API Body Example for HTTP Request:
+{
+  "name": "John Doe",
+  "email": "<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b7ddd8dfd9f7d2cfd6dac7dbd299d4d8da">[email&#160;protected]</a>"
+}
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=458 data-line-end=459 ><a id="32_Debugging_Advanced_Workflows_458"></a><strong>32. Debugging Advanced Workflows</strong></h2>
+<h3 class="code-line" data-line-start=460 data-line-end=461 ><a id="Advanced_Debugging_Tools_460"></a><strong>Advanced Debugging Tools</strong></h3>
+<ol>
+<li class="has-line-data" data-line-start="461" data-line-end="462"><strong>Slow Step</strong>: Execute workflows step-by-step.</li>
+<li class="has-line-data" data-line-start="462" data-line-end="463"><strong>Immediate Panel</strong>: Evaluate expressions during debugging.</li>
+<li class="has-line-data" data-line-start="463" data-line-end="465"><strong>Highlight Elements</strong>: Visualize UI interactions during execution.</li>
+</ol>
+<hr>
+<h2 class="code-line" data-line-start=467 data-line-end=468 ><a id="33_Data_Manipulation_467"></a><strong>33. Data Manipulation</strong></h2>
+<h3 class="code-line" data-line-start=469 data-line-end=470 ><a id="Key_Concepts_469"></a><strong>Key Concepts</strong></h3>
+<ol>
+<li class="has-line-data" data-line-start="470" data-line-end="476">
+<p class="has-line-data" data-line-start="470" data-line-end="471"><strong>String Operations</strong>:</p>
+<pre><code class="has-line-data" data-line-start="472" data-line-end="475" class="language-uipath">result = inputString.ToUpper()
+result = inputString.Replace(&quot;old&quot;, &quot;new&quot;)
+</code></pre>
+</li>
+<li class="has-line-data" data-line-start="476" data-line-end="485">
+<p class="has-line-data" data-line-start="476" data-line-end="477"><strong>DataTable Operations</strong>:</p>
+<ul>
+<li class="has-line-data" data-line-start="477" data-line-end="478">Use <strong>Filter DataTable</strong> to refine rows and columns.</li>
+<li class="has-line-data" data-line-start="478" data-line-end="485">Use LINQ for advanced filtering:<pre><code class="has-line-data" data-line-start="480" data-line-end="484" class="language-uipath">result = dataTable.AsEnumerable()
+                  .Where(Function(row) row(&quot;Column1&quot;).ToString = &quot;Value&quot;)
+                  .CopyToDataTable()
+</code></pre>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 class="code-line" data-line-start=487 data-line-end=488 ><a id="34_Using_Parallel_and_Parallel_For_Each_487"></a><strong>34. Using Parallel and Parallel For Each</strong></h2>
+<h3 class="code-line" data-line-start=489 data-line-end=490 ><a id="Parallel_Activity_489"></a><strong>Parallel Activity</strong></h3>
+<ul>
+<li class="has-line-data" data-line-start="490" data-line-end="495">Executes activities simultaneously when independent.<pre><code class="has-line-data" data-line-start="492" data-line-end="494" class="language-uipath"># Example: Download files and log data in parallel branches.
+</code></pre>
+</li>
+</ul>
+<h3 class="code-line" data-line-start=495 data-line-end=496 ><a id="Parallel_For_Each_495"></a><strong>Parallel For Each</strong></h3>
+<ul>
+<li class="has-line-data" data-line-start="496" data-line-end="498">Iterates over collections with parallel execution.</li>
+</ul>
+<hr>
+<h2 class="code-line" data-line-start=500 data-line-end=501 ><a id="35_UiPath_Test_Automation_500"></a><strong>35. UiPath Test Automation</strong></h2>
+<h3 class="code-line" data-line-start=502 data-line-end=503 ><a id="Key_Concepts_502"></a><strong>Key Concepts</strong></h3>
+<ul>
+<li class="has-line-data" data-line-start="503" data-line-end="504">Create <strong>Test Cases</strong> in UiPath Studio.</li>
+<li class="has-line-data" data-line-start="504" data-line-end="505">Use <strong>Data-Driven Testing</strong> with CSV or Excel inputs.</li>
+<li class="has-line-data" data-line-start="505" data-line-end="507">Generate test results and logs for verification.</li>
+</ul>
+<hr>
+<h2 class="code-line" data-line-start=509 data-line-end=510 ><a id="36_RPA_Best_Practices_509"></a><strong>36. RPA Best Practices</strong></h2>
+<h3 class="code-line" data-line-start=511 data-line-end=512 ><a id="General_Best_Practices_511"></a><strong>General Best Practices</strong></h3>
+<ol>
+<li class="has-line-data" data-line-start="512" data-line-end="514"><strong>Reusable Components</strong>:
+<ul>
+<li class="has-line-data" data-line-start="513" data-line-end="514">Create libraries for frequently used workflows.</li>
+</ul>
+</li>
+<li class="has-line-data" data-line-start="514" data-line-end="516"><strong>Error Logging</strong>:
+<ul>
+<li class="has-line-data" data-line-start="515" data-line-end="516">Always log errors and warnings in workflows.</li>
+</ul>
+</li>
+<li class="has-line-data" data-line-start="516" data-line-end="518"><strong>Folder Structure</strong>:
+<ul>
+<li class="has-line-data" data-line-start="517" data-line-end="518">Organize workflows into folders: <code>Input</code>, <code>Output</code>, <code>Process</code>, <code>Logs</code>.</li>
+</ul>
+</li>
+<li class="has-line-data" data-line-start="518" data-line-end="521"><strong>Documentation</strong>:
+<ul>
+<li class="has-line-data" data-line-start="519" data-line-end="521">Annotate workflows for clarity.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 class="code-line" data-line-start=523 data-line-end=524 ><a id="37_Key_Shortcuts_in_UiPath_Studio_523"></a><strong>37. Key Shortcuts in UiPath Studio</strong></h2>
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th><strong>Shortcut</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Ctrl + N</code></td>
+<td>Create a new project.</td>
+</tr>
+<tr>
+<td><code>Ctrl + P</code></td>
+<td>Open an existing project.</td>
+</tr>
+<tr>
+<td><code>F5</code></td>
+<td>Run the workflow.</td>
+</tr>
+<tr>
+<td><code>Ctrl + Shift + N</code></td>
+<td>Add a new Sequence/Flowchart.</td>
+</tr>
+<tr>
+<td><code>Ctrl + L</code></td>
+<td>Open Output Panel.</td>
+</tr>
+<tr>
+<td><code>Ctrl + D</code></td>
+<td>Debug the workflow.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 class="code-line" data-line-start=536 data-line-end=537 ><a id="38_Common_Pitfalls_536"></a><strong>38. Common Pitfalls</strong></h2>
+<ol>
+<li class="has-line-data" data-line-start="538" data-line-end="540"><strong>Hardcoded Values</strong>:
+<ul>
+<li class="has-line-data" data-line-start="539" data-line-end="540">Avoid hardcoding paths or credentials. Use variables or assets instead.</li>
+</ul>
+</li>
+<li class="has-line-data" data-line-start="540" data-line-end="542"><strong>Inadequate Error Handling</strong>:
+<ul>
+<li class="has-line-data" data-line-start="541" data-line-end="542">Ensure every workflow has proper Try/Catch blocks.</li>
+</ul>
+</li>
+<li class="has-line-data" data-line-start="542" data-line-end="544"><strong>Complex Selectors</strong>:
+<ul>
+<li class="has-line-data" data-line-start="543" data-line-end="544">Simplify selectors and validate with UI Explorer.</li>
+</ul>
+</li>
+<li class="has-line-data" data-line-start="544" data-line-end="547"><strong>Unnecessary Rework</strong>:
+<ul>
+<li class="has-line-data" data-line-start="545" data-line-end="547">Use reusable components for repeated tasks.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 class="code-line" data-line-start=549 data-line-end=550 ><a id="39_Additional_Resources_549"></a><strong>39. Additional Resources</strong></h2>
+<ol>
+<li class="has-line-data" data-line-start="551" data-line-end="552"><strong>UiPath Tutorials</strong>: <a href="https://academy.uipath.com/">UiPath Academy</a></li>
+<li class="has-line-data" data-line-start="552" data-line-end="553"><strong>UiPath Activities Guide</strong>: <a href="https://docs.uipath.com/">Documentation</a></li>
+<li class="has-line-data" data-line-start="553" data-line-end="555"><strong>UiPath Community Forum</strong>: <a href="https://forum.uipath.com/">Forum</a></li>
+</ol>
+<hr>
+<h2 class="code-line" data-line-start=556 data-line-end=557 ><a id="40_Advanced_DataTable_Manipulations_556"></a><strong>40. Advanced DataTable Manipulations</strong></h2>
+<h3 class="code-line" data-line-start=558 data-line-end=559 ><a id="Key_DataTable_Operations_558"></a><strong>Key DataTable Operations</strong></h3>
+<ol>
+<li class="has-line-data" data-line-start="559" data-line-end="565">
+<p class="has-line-data" data-line-start="559" data-line-end="560"><strong>Merging DataTables</strong>:</p>
+<pre><code class="has-line-data" data-line-start="561" data-line-end="564" class="language-uipath"># Use 'Merge Data Table' activity to combine two DataTables.
+# DataTable1.Merge(DataTable2)
+</code></pre>
+</li>
+<li class="has-line-data" data-line-start="565" data-line-end="571">
+<p class="has-line-data" data-line-start="565" data-line-end="566"><strong>Sorting DataTable</strong>:</p>
+<pre><code class="has-line-data" data-line-start="567" data-line-end="570" class="language-uipath"># Use 'Sort Data Table' activity.
+# Input: DataTable, Sort Column: &quot;ColumnName&quot;, Direction: Ascending
+</code></pre>
+</li>
+<li class="has-line-data" data-line-start="571" data-line-end="582">
+<p class="has-line-data" data-line-start="571" data-line-end="572"><strong>Group By Operations (LINQ)</strong>:</p>
+<pre><code class="has-line-data" data-line-start="573" data-line-end="581" class="language-uipath"># Example: Group rows by a column value.
+result = dataTable.AsEnumerable()
+                  .GroupBy(Function(row) row(&quot;Category&quot;))
+                  .Select(Function(g) New With {
+                      .Key = g.Key,
+                      .Count = g.Count()
+                  }).ToList()
+</code></pre>
+</li>
+<li class="has-line-data" data-line-start="582" data-line-end="585">
+<p class="has-line-data" data-line-start="582" data-line-end="583"><strong>Pivot Tables</strong>:</p>
+<ul>
+<li class="has-line-data" data-line-start="583" data-line-end="585">Use LINQ or external libraries like Excel to create pivot-like aggregations.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 class="code-line" data-line-start=587 data-line-end=588 ><a id="41_Using_Regex_for_Advanced_Text_Manipulation_587"></a><strong>41. Using Regex for Advanced Text Manipulation</strong></h2>
+<h3 class="code-line" data-line-start=589 data-line-end=590 ><a id="Key_Regex_Activities_589"></a><strong>Key Regex Activities</strong></h3>
+<ol>
+<li class="has-line-data" data-line-start="590" data-line-end="597">
+<p class="has-line-data" data-line-start="590" data-line-end="591"><strong>Matches</strong>:</p>
+<ul>
+<li class="has-line-data" data-line-start="591" data-line-end="592">Extract multiple matches from a string.</li>
+</ul>
+<pre><code class="has-line-data" data-line-start="593" data-line-end="596" class="language-uipath"># Pattern: &quot;\d{4}-\d{2}-\d{2}&quot; (YYYY-MM-DD format)
+Matches = Regex.Matches(InputString, &quot;\d{4}-\d{2}-\d{2}&quot;)
+</code></pre>
+</li>
+<li class="has-line-data" data-line-start="597" data-line-end="604">
+<p class="has-line-data" data-line-start="597" data-line-end="598"><strong>Is Match</strong>:</p>
+<ul>
+<li class="has-line-data" data-line-start="598" data-line-end="599">Validate whether a string matches a pattern.</li>
+</ul>
+<pre><code class="has-line-data" data-line-start="600" data-line-end="603" class="language-uipath"># Pattern: &quot;^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$&quot; (Email format)
+IsValidEmail = Regex.IsMatch(Email, &quot;^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$&quot;)
+</code></pre>
+</li>
+<li class="has-line-data" data-line-start="604" data-line-end="611">
+<p class="has-line-data" data-line-start="604" data-line-end="605"><strong>Replace</strong>:</p>
+<ul>
+<li class="has-line-data" data-line-start="605" data-line-end="606">Replace matched patterns in a string.</li>
+</ul>
+<pre><code class="has-line-data" data-line-start="607" data-line-end="610" class="language-uipath"># Replace digits with &quot;X&quot;.
+CleanedString = Regex.Replace(InputString, &quot;\d&quot;, &quot;X&quot;)
+</code></pre>
+</li>
+</ol>
+<hr>
+<h2 class="code-line" data-line-start=613 data-line-end=614 ><a id="42_Using_JSON_and_XML_613"></a><strong>42. Using JSON and XML</strong></h2>
+<h3 class="code-line" data-line-start=615 data-line-end=616 ><a id="Parsing_JSON_615"></a><strong>Parsing JSON</strong></h3>
+<ul>
+<li class="has-line-data" data-line-start="616" data-line-end="618">Use the <strong>Deserialize JSON</strong> activity to process JSON data.</li>
+</ul>
+<pre><code class="has-line-data" data-line-start="619" data-line-end="624" class="language-uipath"># JSON String: {&quot;name&quot;: &quot;Alice&quot;, &quot;age&quot;: 25}
+# Use Deserialize JSON activity to convert it to a JObject.
+Name = jsonObject(&quot;name&quot;).ToString()
+Age = jsonObject(&quot;age&quot;).ToString()
+</code></pre>
+<h3 class="code-line" data-line-start=625 data-line-end=626 ><a id="Processing_XML_625"></a><strong>Processing XML</strong></h3>
+<ul>
+<li class="has-line-data" data-line-start="626" data-line-end="628">Use <strong>Deserialize XML</strong> activity to handle XML data.</li>
+</ul>
+<pre><code class="has-line-data" data-line-start="629" data-line-end="632" class="language-uipath"># Use XPath to extract nodes.
+NodeValue = xmlDocument.SelectSingleNode(&quot;//NodeName&quot;).InnerText
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=635 data-line-end=636 ><a id="43_Integration_with_Databases_635"></a><strong>43. Integration with Databases</strong></h2>
+<h3 class="code-line" data-line-start=637 data-line-end=638 ><a id="Key_Database_Activities_637"></a><strong>Key Database Activities</strong></h3>
+<ul>
+<li class="has-line-data" data-line-start="638" data-line-end="640">Use the <strong>Database</strong> package (install via Manage Packages) for SQL operations.</li>
+</ul>
+<h3 class="code-line" data-line-start=640 data-line-end=641 ><a id="Code_Example_Database_Connection_640"></a><strong>Code Example: Database Connection</strong></h3>
+<ol>
+<li class="has-line-data" data-line-start="641" data-line-end="642">Use <strong>Connect</strong> activity to connect to a database.</li>
+<li class="has-line-data" data-line-start="642" data-line-end="646">Run queries with:
+<ul>
+<li class="has-line-data" data-line-start="643" data-line-end="644"><strong>Execute Query</strong> (SELECT statements).</li>
+<li class="has-line-data" data-line-start="644" data-line-end="646"><strong>Execute Non-Query</strong> (INSERT, UPDATE, DELETE).</li>
+</ul>
+</li>
+</ol>
+<pre><code class="has-line-data" data-line-start="647" data-line-end="650" class="language-uipath"># Example: Execute Query to retrieve data
+QueryResult = Execute Query(&quot;SELECT * FROM Users WHERE Age &gt; 25&quot;)
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=653 data-line-end=654 ><a id="44_Email_Automation_653"></a><strong>44. Email Automation</strong></h2>
+<h3 class="code-line" data-line-start=655 data-line-end=656 ><a id="Key_Email_Activities_655"></a><strong>Key Email Activities</strong></h3>
+<ul>
+<li class="has-line-data" data-line-start="656" data-line-end="657">Install <strong>UiPath.Mail.Activities</strong> from Manage Packages.</li>
+<li class="has-line-data" data-line-start="657" data-line-end="659">Use activities like <strong>Send SMTP Mail Message</strong>, <strong>Get IMAP Mail Messages</strong>, etc.</li>
+</ul>
+<h3 class="code-line" data-line-start=659 data-line-end=660 ><a id="Code_Example_Reading_Emails_659"></a><strong>Code Example: Reading Emails</strong></h3>
+<pre><code class="has-line-data" data-line-start="661" data-line-end="667" class="language-uipath"># Use Get IMAP Mail Messages
+# Server: &quot;imap.gmail.com&quot;
+# Port: 993
+# SecureConnection: True
+Emails = Get IMAP Mail Messages
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=670 data-line-end=671 ><a id="45_Creating_Reusable_Templates_670"></a><strong>45. Creating Reusable Templates</strong></h2>
+<h3 class="code-line" data-line-start=672 data-line-end=673 ><a id="What_Are_Templates_672"></a><strong>What Are Templates?</strong></h3>
+<ul>
+<li class="has-line-data" data-line-start="673" data-line-end="675">Prebuilt project setups for faster development.</li>
+</ul>
+<h3 class="code-line" data-line-start=675 data-line-end=676 ><a id="Key_Steps_to_Create_a_Template_675"></a><strong>Key Steps to Create a Template</strong></h3>
+<ol>
+<li class="has-line-data" data-line-start="676" data-line-end="677">Design a generic workflow with placeholders.</li>
+<li class="has-line-data" data-line-start="677" data-line-end="678">Save it as a project template via <strong>File &gt; Export &gt; Save as Template</strong>.</li>
+<li class="has-line-data" data-line-start="678" data-line-end="683">Templates can include reusable:
+<ul>
+<li class="has-line-data" data-line-start="679" data-line-end="680">Logging frameworks.</li>
+<li class="has-line-data" data-line-start="680" data-line-end="681">Data input/output structures.</li>
+<li class="has-line-data" data-line-start="681" data-line-end="683">Preconfigured workflows for settings.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 class="code-line" data-line-start=685 data-line-end=686 ><a id="46_String_Manipulations_685"></a><strong>46. String Manipulations</strong></h2>
+<h3 class="code-line" data-line-start=687 data-line-end=688 ><a id="Advanced_String_Operations_687"></a><strong>Advanced String Operations</strong></h3>
+<ol>
+<li class="has-line-data" data-line-start="688" data-line-end="693">
+<p class="has-line-data" data-line-start="688" data-line-end="689"><strong>Split Strings</strong>:</p>
+<pre><code class="has-line-data" data-line-start="690" data-line-end="692" class="language-uipath">Parts = InputString.Split(&quot;,&quot;c)
+</code></pre>
+</li>
+<li class="has-line-data" data-line-start="693" data-line-end="698">
+<p class="has-line-data" data-line-start="693" data-line-end="694"><strong>Substring</strong>:</p>
+<pre><code class="has-line-data" data-line-start="695" data-line-end="697" class="language-uipath">ExtractedPart = InputString.Substring(0, 5)
+</code></pre>
+</li>
+<li class="has-line-data" data-line-start="698" data-line-end="703">
+<p class="has-line-data" data-line-start="698" data-line-end="699"><strong>String Formatting</strong>:</p>
+<pre><code class="has-line-data" data-line-start="700" data-line-end="702" class="language-uipath">Result = String.Format(&quot;Name: {0}, Age: {1}&quot;, Name, Age)
+</code></pre>
+</li>
+<li class="has-line-data" data-line-start="703" data-line-end="708">
+<p class="has-line-data" data-line-start="703" data-line-end="704"><strong>Join Strings</strong>:</p>
+<pre><code class="has-line-data" data-line-start="705" data-line-end="707" class="language-uipath">JoinedString = String.Join(&quot;, &quot;, ListOfStrings)
+</code></pre>
+</li>
+</ol>
+<hr>
+<h2 class="code-line" data-line-start=710 data-line-end=711 ><a id="47_Image_and_PDF_Automation_710"></a><strong>47. Image and PDF Automation</strong></h2>
+<h3 class="code-line" data-line-start=712 data-line-end=713 ><a id="Key_Image_Automation_Activities_712"></a><strong>Key Image Automation Activities</strong></h3>
+<ul>
+<li class="has-line-data" data-line-start="713" data-line-end="714">Use <strong>Click Image</strong> or <strong>Find Image</strong> for non-standard UI interactions.</li>
+<li class="has-line-data" data-line-start="714" data-line-end="716">Use <strong>Image Exists</strong> to validate UI elements.</li>
+</ul>
+<h3 class="code-line" data-line-start=716 data-line-end=717 ><a id="Key_PDF_Automation_Activities_716"></a><strong>Key PDF Automation Activities</strong></h3>
+<ul>
+<li class="has-line-data" data-line-start="717" data-line-end="718">Install <strong>UiPath.PDF.Activities</strong>.</li>
+<li class="has-line-data" data-line-start="718" data-line-end="720">Use <strong>Read PDF Text</strong> or <strong>Read PDF with OCR</strong> to extract content.</li>
+</ul>
+<hr>
+<h2 class="code-line" data-line-start=722 data-line-end=723 ><a id="48_Integrating_Python_Scripts_722"></a><strong>48. Integrating Python Scripts</strong></h2>
+<h3 class="code-line" data-line-start=724 data-line-end=725 ><a id="Key_Python_Activities_724"></a><strong>Key Python Activities</strong></h3>
+<ul>
+<li class="has-line-data" data-line-start="725" data-line-end="727">Use the <strong>Invoke Python Method</strong> activity to integrate Python scripts.</li>
+</ul>
+<h3 class="code-line" data-line-start=727 data-line-end=728 ><a id="Code_Example_Running_a_Python_Script_727"></a><strong>Code Example: Running a Python Script</strong></h3>
+<pre><code class="has-line-data" data-line-start="729" data-line-end="733" class="language-uipath"># Configure Python Scope with the path to Python executable.
+# Use Invoke Python Method to call a function:
+Result = Invoke Python Method(&quot;my_function&quot;, {&quot;param1&quot;, &quot;param2&quot;})
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=736 data-line-end=737 ><a id="49_Debugging_Logs_736"></a><strong>49. Debugging Logs</strong></h2>
+<h3 class="code-line" data-line-start=738 data-line-end=739 ><a id="Key_Debugging_Tips_738"></a><strong>Key Debugging Tips</strong></h3>
+<ol>
+<li class="has-line-data" data-line-start="739" data-line-end="744">
+<p class="has-line-data" data-line-start="739" data-line-end="740"><strong>Add Verbose Logs</strong>:</p>
+<pre><code class="has-line-data" data-line-start="741" data-line-end="743" class="language-uipath">Log Message: &quot;Variable X Value: &quot; + X.ToString
+</code></pre>
+</li>
+<li class="has-line-data" data-line-start="744" data-line-end="747">
+<p class="has-line-data" data-line-start="744" data-line-end="745"><strong>Highlight Elements</strong>:</p>
+<ul>
+<li class="has-line-data" data-line-start="745" data-line-end="747">Use <strong>Highlight</strong> activity to visualize element interactions.</li>
+</ul>
+</li>
+<li class="has-line-data" data-line-start="747" data-line-end="750">
+<p class="has-line-data" data-line-start="747" data-line-end="748"><strong>Inspect Exceptions</strong>:</p>
+<ul>
+<li class="has-line-data" data-line-start="748" data-line-end="750">Enable <strong>Break on Exceptions</strong> in Debug Mode for step-by-step debugging.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 class="code-line" data-line-start=752 data-line-end=753 ><a id="50_Advanced_Scheduling_Without_Orchestrator_752"></a><strong>50. Advanced Scheduling Without Orchestrator</strong></h2>
+<h3 class="code-line" data-line-start=754 data-line-end=755 ><a id="Using_Windows_Task_Scheduler_754"></a><strong>Using Windows Task Scheduler</strong></h3>
+<ul>
+<li class="has-line-data" data-line-start="755" data-line-end="756">Use <strong>Task Scheduler</strong> to trigger workflows on a schedule.</li>
+</ul>
+<ol>
+<li class="has-line-data" data-line-start="756" data-line-end="757">Export the workflow as a <code>.bat</code> file.</li>
+<li class="has-line-data" data-line-start="757" data-line-end="759">Schedule the <code>.bat</code> file using Task Scheduler.</li>
+</ol>
+<hr>
+<h2 class="code-line" data-line-start=761 data-line-end=762 ><a id="51_Handling_Parallel_Processes_761"></a><strong>51. Handling Parallel Processes</strong></h2>
+<h3 class="code-line" data-line-start=763 data-line-end=764 ><a id="Key_Activities_763"></a><strong>Key Activities</strong></h3>
+<ul>
+<li class="has-line-data" data-line-start="764" data-line-end="766">Use the <strong>Parallel</strong> activity to run independent branches of workflows simultaneously.</li>
+</ul>
+<pre><code class="has-line-data" data-line-start="767" data-line-end="771" class="language-uipath"># Example:
+# Left Branch: Scraping a webpage.
+# Right Branch: Logging data into Excel.
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=774 data-line-end=775 ><a id="52_Error_Screenshots_774"></a><strong>52. Error Screenshots</strong></h2>
+<h3 class="code-line" data-line-start=776 data-line-end=777 ><a id="Key_Concepts_776"></a><strong>Key Concepts</strong></h3>
+<ul>
+<li class="has-line-data" data-line-start="777" data-line-end="778">Use the <strong>Take Screenshot</strong> activity to capture errors during workflow execution.</li>
+<li class="has-line-data" data-line-start="778" data-line-end="780">Save the screenshot locally or send via email for debugging.</li>
+</ul>
+<hr>
+<h2 class="code-line" data-line-start=782 data-line-end=783 ><a id="53_Using_External_Libraries_782"></a><strong>53. Using External Libraries</strong></h2>
+<h3 class="code-line" data-line-start=784 data-line-end=785 ><a id="Integrate_NET_Libraries_784"></a><strong>Integrate .NET Libraries</strong></h3>
+<ul>
+<li class="has-line-data" data-line-start="785" data-line-end="786">Import custom .NET DLLs via <strong>Manage Packages</strong>.</li>
+<li class="has-line-data" data-line-start="786" data-line-end="788">Use <strong>Invoke Code</strong> to call .NET functions.</li>
+</ul>
+<hr>
+<h2 class="code-line" data-line-start=790 data-line-end=791 ><a id="54_Interactive_Forms_with_UiPath_Forms_790"></a><strong>54. Interactive Forms with UiPath Forms</strong></h2>
+<h3 class="code-line" data-line-start=792 data-line-end=793 ><a id="Key_Features_792"></a><strong>Key Features</strong></h3>
+<ul>
+<li class="has-line-data" data-line-start="793" data-line-end="794">Create user interfaces for human intervention using the <strong>UiPath.Form.Activities</strong> package.</li>
+<li class="has-line-data" data-line-start="794" data-line-end="796">Collect user input during workflows.</li>
+</ul>
+<hr>
+<h2 class="code-line" data-line-start=798 data-line-end=799 ><a id="55_Performance_Optimization_798"></a><strong>55. Performance Optimization</strong></h2>
+<h3 class="code-line" data-line-start=800 data-line-end=801 ><a id="Best_Practices_800"></a><strong>Best Practices</strong></h3>
+<ol>
+<li class="has-line-data" data-line-start="801" data-line-end="803"><strong>Use Invoke Workflow</strong>:
+<ul>
+<li class="has-line-data" data-line-start="802" data-line-end="803">Break workflows into smaller components for faster execution.</li>
+</ul>
+</li>
+<li class="has-line-data" data-line-start="803" data-line-end="805"><strong>Minimize UI Interactions</strong>:
+<ul>
+<li class="has-line-data" data-line-start="804" data-line-end="805">Use <strong>background automation</strong> activities when possible.</li>
+</ul>
+</li>
+<li class="has-line-data" data-line-start="805" data-line-end="808"><strong>Optimize Selectors</strong>:
+<ul>
+<li class="has-line-data" data-line-start="806" data-line-end="808">Use wildcard selectors for dynamic elements.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 class="code-line" data-line-start=810 data-line-end=811 ><a id="56_Best_Practices_for_LargeScale_Projects_810"></a><strong>56. Best Practices for Large-Scale Projects</strong></h2>
+<ol>
+<li class="has-line-data" data-line-start="812" data-line-end="814"><strong>Folder Organization</strong>:
+<ul>
+<li class="has-line-data" data-line-start="813" data-line-end="814">Use folders like <code>Input</code>, <code>Output</code>, <code>Logs</code>, and <code>Config</code>.</li>
+</ul>
+</li>
+<li class="has-line-data" data-line-start="814" data-line-end="816"><strong>Use Config Files</strong>:
+<ul>
+<li class="has-line-data" data-line-start="815" data-line-end="816">Store constants in external files like JSON or Excel.</li>
+</ul>
+</li>
+<li class="has-line-data" data-line-start="816" data-line-end="819"><strong>Centralized Logging</strong>:
+<ul>
+<li class="has-line-data" data-line-start="817" data-line-end="819">Route all logs to a single workflow or file.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 class="code-line" data-line-start=821 data-line-end=822 ><a id="57_Advanced_Frameworks_821"></a><strong>57. Advanced Frameworks</strong></h2>
+<h3 class="code-line" data-line-start=823 data-line-end=824 ><a id="REFramework_Robotic_Enterprise_Framework_823"></a><strong>REFramework</strong> (Robotic Enterprise Framework)</h3>
+<ul>
+<li class="has-line-data" data-line-start="824" data-line-end="825">A prebuilt framework provided by UiPath for scalable automation.</li>
+<li class="has-line-data" data-line-start="825" data-line-end="827">Includes logging, exception handling, and retry mechanisms.</li>
+</ul>
+<hr>
+<h2 class="code-line" data-line-start=829 data-line-end=830 ><a id="58_Additional_Topics_829"></a><strong>58. Additional Topics</strong></h2>
+<ol>
+<li class="has-line-data" data-line-start="831" data-line-end="833"><strong>Working with Active Directory</strong>:
+<ul>
+<li class="has-line-data" data-line-start="832" data-line-end="833">Use activities like <strong>Get AD Users</strong> for user management.</li>
+</ul>
+</li>
+<li class="has-line-data" data-line-start="833" data-line-end="836"><strong>Custom Activity Development</strong>:
+<ul>
+<li class="has-line-data" data-line-start="834" data-line-end="836">Develop custom activities in Visual Studio and import them into UiPath.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 class="code-line" data-line-start=837 data-line-end=838 ><a id="59_UiPath_Orchestrator_Overview_837"></a><strong>59. UiPath Orchestrator: Overview</strong></h2>
+<h3 class="code-line" data-line-start=839 data-line-end=840 ><a id="What_is_Orchestrator_839"></a><strong>What is Orchestrator?</strong></h3>
+<ul>
+<li class="has-line-data" data-line-start="840" data-line-end="841">UiPath Orchestrator is a web-based application for managing and monitoring RPA workflows.</li>
+<li class="has-line-data" data-line-start="841" data-line-end="846">It provides tools for:
+<ol>
+<li class="has-line-data" data-line-start="842" data-line-end="843"><strong>Scheduling</strong>: Automate task execution at specified times.</li>
+<li class="has-line-data" data-line-start="843" data-line-end="844"><strong>Queue Management</strong>: Manage and track work items.</li>
+<li class="has-line-data" data-line-start="844" data-line-end="846"><strong>Robot Management</strong>: Connect and monitor robots.</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h3 class="code-line" data-line-start=848 data-line-end=849 ><a id="Key_Orchestrator_Components_848"></a><strong>Key Orchestrator Components</strong></h3>
+<ol>
+<li class="has-line-data" data-line-start="849" data-line-end="850"><strong>Assets</strong>: Store reusable configurations like credentials, file paths, or API keys.</li>
+<li class="has-line-data" data-line-start="850" data-line-end="851"><strong>Queues</strong>: Enable handling of high-volume data by processing items in parallel.</li>
+<li class="has-line-data" data-line-start="851" data-line-end="852"><strong>Triggers</strong>: Automate workflows based on schedules or events.</li>
+<li class="has-line-data" data-line-start="852" data-line-end="853"><strong>Logs</strong>: Centralized logging for workflows and robots.</li>
+<li class="has-line-data" data-line-start="853" data-line-end="855"><strong>Jobs</strong>: Monitor real-time workflow executions.</li>
+</ol>
+<hr>
+<h3 class="code-line" data-line-start=857 data-line-end=858 ><a id="Connecting_Robots_to_Orchestrator_857"></a><strong>Connecting Robots to Orchestrator</strong></h3>
+<ol>
+<li class="has-line-data" data-line-start="858" data-line-end="859">Open <strong>UiPath Assistant</strong> and navigate to <strong>Orchestrator Settings</strong>.</li>
+<li class="has-line-data" data-line-start="859" data-line-end="860">Paste the <strong>Machine Key</strong> and Orchestrator URL (provided in Orchestrator).</li>
+<li class="has-line-data" data-line-start="860" data-line-end="862">Click <strong>Connect</strong> to establish a link.</li>
+</ol>
+<hr>
+<h2 class="code-line" data-line-start=864 data-line-end=865 ><a id="60_UiPath_Assistant_864"></a><strong>60. UiPath Assistant</strong></h2>
+<h3 class="code-line" data-line-start=866 data-line-end=867 ><a id="What_is_UiPath_Assistant_866"></a><strong>What is UiPath Assistant?</strong></h3>
+<ul>
+<li class="has-line-data" data-line-start="867" data-line-end="868">A desktop application that allows you to manage and trigger attended robots.</li>
+<li class="has-line-data" data-line-start="868" data-line-end="873">Provides an easy interface for users to:
+<ol>
+<li class="has-line-data" data-line-start="869" data-line-end="870">Launch workflows.</li>
+<li class="has-line-data" data-line-start="870" data-line-end="871">Monitor robot statuses.</li>
+<li class="has-line-data" data-line-start="871" data-line-end="873">Connect robots to Orchestrator.</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h3 class="code-line" data-line-start=875 data-line-end=876 ><a id="Key_Features_875"></a><strong>Key Features</strong></h3>
+<ul>
+<li class="has-line-data" data-line-start="876" data-line-end="879"><strong>Process Tray</strong>:
+<ul>
+<li class="has-line-data" data-line-start="877" data-line-end="878">Displays available processes configured for the robot.</li>
+<li class="has-line-data" data-line-start="878" data-line-end="879">Processes can be started with one click.</li>
+</ul>
+</li>
+<li class="has-line-data" data-line-start="879" data-line-end="881"><strong>Settings</strong>:
+<ul>
+<li class="has-line-data" data-line-start="880" data-line-end="881">Configure Orchestrator connection or local robot behavior.</li>
+</ul>
+</li>
+<li class="has-line-data" data-line-start="881" data-line-end="884"><strong>Notifications</strong>:
+<ul>
+<li class="has-line-data" data-line-start="882" data-line-end="884">Displays alerts like pending tasks or connection issues.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 class="code-line" data-line-start=886 data-line-end=887 ><a id="61_Queues_in_Detail_886"></a><strong>61. Queues in Detail</strong></h2>
+<h3 class="code-line" data-line-start=888 data-line-end=889 ><a id="What_Are_Queues_888"></a><strong>What Are Queues?</strong></h3>
+<p class="has-line-data" data-line-start="889" data-line-end="890">Queues manage high-volume workloads by splitting them into smaller, manageable items.</p>
+<h3 class="code-line" data-line-start=891 data-line-end=892 ><a id="Steps_to_Use_Queues_891"></a><strong>Steps to Use Queues</strong></h3>
+<ol>
+<li class="has-line-data" data-line-start="892" data-line-end="893">Create a queue in Orchestrator.</li>
+<li class="has-line-data" data-line-start="893" data-line-end="894">Add items to the queue using the <strong>Add Queue Item</strong> activity.</li>
+<li class="has-line-data" data-line-start="894" data-line-end="895">Process queue items using <strong>Get Transaction Item</strong> activity.</li>
+<li class="has-line-data" data-line-start="895" data-line-end="897">Mark items as successful or failed using <strong>Set Transaction Status</strong>.</li>
+</ol>
+<h3 class="code-line" data-line-start=897 data-line-end=898 ><a id="Code_Example_897"></a><strong>Code Example</strong></h3>
+<pre><code class="has-line-data" data-line-start="899" data-line-end="905" class="language-uipath"># Adding Items to a Queue
+Add Queue Item(&quot;InvoiceQueue&quot;, {&quot;InvoiceID&quot;: &quot;12345&quot;, &quot;Amount&quot;: 500})
+
+# Processing Items from the Queue
+transactionItem = Get Transaction Item(&quot;InvoiceQueue&quot;)
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=908 data-line-end=909 ><a id="62_Scheduling_Jobs_908"></a><strong>62. Scheduling Jobs</strong></h2>
+<h3 class="code-line" data-line-start=910 data-line-end=911 ><a id="What_Are_Triggers_910"></a><strong>What Are Triggers?</strong></h3>
+<p class="has-line-data" data-line-start="911" data-line-end="912">Triggers in Orchestrator automate job execution based on:</p>
+<ol>
+<li class="has-line-data" data-line-start="912" data-line-end="913"><strong>Time-based schedules</strong> (e.g., daily at 9 AM).</li>
+<li class="has-line-data" data-line-start="913" data-line-end="915"><strong>Queue-based triggers</strong> (e.g., when a queue has new items).</li>
+</ol>
+<h3 class="code-line" data-line-start=915 data-line-end=916 ><a id="Steps_to_Schedule_a_Job_915"></a><strong>Steps to Schedule a Job</strong></h3>
+<ol>
+<li class="has-line-data" data-line-start="916" data-line-end="917">Navigate to <strong>Triggers</strong> in Orchestrator.</li>
+<li class="has-line-data" data-line-start="917" data-line-end="920">Select the process and configure:
+<ul>
+<li class="has-line-data" data-line-start="918" data-line-end="919">Start time.</li>
+<li class="has-line-data" data-line-start="919" data-line-end="920">Recurrence (CRON expressions supported).</li>
+</ul>
+</li>
+<li class="has-line-data" data-line-start="920" data-line-end="922">Save the trigger.</li>
+</ol>
+<h3 class="code-line" data-line-start=922 data-line-end=923 ><a id="CRON_Example_922"></a><strong>CRON Example</strong>:</h3>
+<pre><code class="has-line-data" data-line-start="924" data-line-end="926" class="language-cron">0 9 * * *  # Run daily at 9 AM
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=929 data-line-end=930 ><a id="63_Advanced_Orchestrator_Features_929"></a><strong>63. Advanced Orchestrator Features</strong></h2>
+<h3 class="code-line" data-line-start=931 data-line-end=932 ><a id="MultiTenancy_931"></a><strong>Multi-Tenancy</strong></h3>
+<ul>
+<li class="has-line-data" data-line-start="932" data-line-end="933">Allows separate environments (tenants) for different teams or departments.</li>
+<li class="has-line-data" data-line-start="933" data-line-end="935">Each tenant has isolated resources like robots, queues, and logs.</li>
+</ul>
+<h3 class="code-line" data-line-start=935 data-line-end=936 ><a id="Modern_Folders_935"></a><strong>Modern Folders</strong></h3>
+<ul>
+<li class="has-line-data" data-line-start="936" data-line-end="937">Dynamically assign processes and resources to robots.</li>
+<li class="has-line-data" data-line-start="937" data-line-end="939">Easier to manage multiple robots across projects.</li>
+</ul>
+<hr>
+<h2 class="code-line" data-line-start=941 data-line-end=942 ><a id="64_Advanced_Logging_and_Monitoring_941"></a><strong>64. Advanced Logging and Monitoring</strong></h2>
+<h3 class="code-line" data-line-start=943 data-line-end=944 ><a id="Orchestrator_Logs_943"></a><strong>Orchestrator Logs</strong></h3>
+<ul>
+<li class="has-line-data" data-line-start="944" data-line-end="945">Centralized logs accessible via the Orchestrator interface.</li>
+<li class="has-line-data" data-line-start="945" data-line-end="950">Can filter by:
+<ul>
+<li class="has-line-data" data-line-start="946" data-line-end="947">Process name.</li>
+<li class="has-line-data" data-line-start="947" data-line-end="948">Robot name.</li>
+<li class="has-line-data" data-line-start="948" data-line-end="950">Log level (Info, Warning, Error).</li>
+</ul>
+</li>
+</ul>
+<h3 class="code-line" data-line-start=950 data-line-end=951 ><a id="Integration_with_ELK_Stack_950"></a><strong>Integration with ELK Stack</strong></h3>
+<ul>
+<li class="has-line-data" data-line-start="951" data-line-end="953">Export logs to Elasticsearch, Logstash, and Kibana for advanced visualization and monitoring.</li>
+</ul>
+<hr>
+<h2 class="code-line" data-line-start=955 data-line-end=956 ><a id="65_Integration_with_External_Tools_955"></a><strong>65. Integration with External Tools</strong></h2>
+<h3 class="code-line" data-line-start=957 data-line-end=958 ><a id="Integration_with_REST_APIs_957"></a><strong>Integration with REST APIs</strong></h3>
+<ul>
+<li class="has-line-data" data-line-start="958" data-line-end="960">Orchestrator provides RESTful APIs for managing robots, jobs, and queues.</li>
+</ul>
+<h4 class="code-line" data-line-start=960 data-line-end=961 ><a id="Example_Start_a_Job_960"></a>Example: Start a Job</h4>
+<pre><code class="has-line-data" data-line-start="962" data-line-end="974" class="language-bash">POST https://your-orchestrator-url/odata/Jobs/UiPath.Server.Configuration.OData.StartJobs
+Headers:
+  Authorization: Bearer &lt;access_token&gt;
+Body:
+{
+  <span class="hljs-string">"startInfo"</span>: {
+    <span class="hljs-string">"ReleaseKey"</span>: <span class="hljs-string">"your-release-key"</span>,
+    <span class="hljs-string">"RobotIds"</span>: [<span class="hljs-number">1</span>],
+    <span class="hljs-string">"Strategy"</span>: <span class="hljs-string">"Specific"</span>
+  }
+}
+</code></pre>
+<h3 class="code-line" data-line-start=975 data-line-end=976 ><a id="ThirdParty_Integrations_975"></a><strong>Third-Party Integrations</strong></h3>
+<ol>
+<li class="has-line-data" data-line-start="976" data-line-end="977"><strong>Slack/Teams</strong>: Automate notifications for job completions or failures.</li>
+<li class="has-line-data" data-line-start="977" data-line-end="979"><strong>ServiceNow</strong>: Trigger workflows based on ITSM tickets.</li>
+</ol>
+<hr>
+<h2 class="code-line" data-line-start=981 data-line-end=982 ><a id="66_Advanced_Assistant_Features_981"></a><strong>66. Advanced Assistant Features</strong></h2>
+<h3 class="code-line" data-line-start=983 data-line-end=984 ><a id="Running_Processes_Locally_983"></a><strong>Running Processes Locally</strong></h3>
+<ol>
+<li class="has-line-data" data-line-start="984" data-line-end="985">Use UiPath Assistant to run attended workflows directly without Orchestrator.</li>
+<li class="has-line-data" data-line-start="985" data-line-end="987">Update workflows by syncing them with Orchestrator.</li>
+</ol>
+<h3 class="code-line" data-line-start=987 data-line-end=988 ><a id="Hotkey_Configuration_987"></a><strong>Hotkey Configuration</strong></h3>
+<ul>
+<li class="has-line-data" data-line-start="988" data-line-end="990">Assign hotkeys to trigger specific workflows for faster execution.</li>
+</ul>
+<hr>
+<h2 class="code-line" data-line-start=992 data-line-end=993 ><a id="67_Governance_and_Security_992"></a><strong>67. Governance and Security</strong></h2>
+<h3 class="code-line" data-line-start=994 data-line-end=995 ><a id="Automation_Governance_994"></a><strong>Automation Governance</strong></h3>
+<ul>
+<li class="has-line-data" data-line-start="995" data-line-end="997">Define and enforce development standards using Orchestrator policies.</li>
+</ul>
+<h3 class="code-line" data-line-start=997 data-line-end=998 ><a id="RoleBased_Access_Control_RBAC_997"></a><strong>Role-Based Access Control (RBAC)</strong></h3>
+<ul>
+<li class="has-line-data" data-line-start="998" data-line-end="1000">Assign roles like Admin, Developer, and Viewer to restrict access to resources.</li>
+</ul>
+<h3 class="code-line" data-line-start=1000 data-line-end=1001 ><a id="Audit_Trails_1000"></a><strong>Audit Trails</strong></h3>
+<ul>
+<li class="has-line-data" data-line-start="1001" data-line-end="1003">Monitor all user actions in Orchestrator for compliance purposes.</li>
+</ul>
+<hr>
+<h2 class="code-line" data-line-start=1005 data-line-end=1006 ><a id="68_Testing_Automation_1005"></a><strong>68. Testing Automation</strong></h2>
+<h3 class="code-line" data-line-start=1007 data-line-end=1008 ><a id="Using_UiPath_Test_Manager_1007"></a><strong>Using UiPath Test Manager</strong></h3>
+<ol>
+<li class="has-line-data" data-line-start="1008" data-line-end="1009">Create <strong>test cases</strong> in UiPath Studio.</li>
+<li class="has-line-data" data-line-start="1009" data-line-end="1010">Link test cases to Orchestrator’s Test Manager.</li>
+<li class="has-line-data" data-line-start="1010" data-line-end="1012">Run automated tests to validate workflows.</li>
+</ol>
+<hr>
+<h2 class="code-line" data-line-start=1014 data-line-end=1015 ><a id="69_Performance_Optimization_1014"></a><strong>69. Performance Optimization</strong></h2>
+<h3 class="code-line" data-line-start=1016 data-line-end=1017 ><a id="Optimize_Workflows_1016"></a><strong>Optimize Workflows</strong></h3>
+<ol>
+<li class="has-line-data" data-line-start="1017" data-line-end="1018">Reduce UI interactions by using <strong>background automation</strong> (e.g., Simulate Click).</li>
+<li class="has-line-data" data-line-start="1018" data-line-end="1020">Optimize selectors by using <strong>wildcards</strong> for dynamic elements.</li>
+</ol>
+<h3 class="code-line" data-line-start=1020 data-line-end=1021 ><a id="Optimize_Queues_1020"></a><strong>Optimize Queues</strong></h3>
+<ul>
+<li class="has-line-data" data-line-start="1021" data-line-end="1023">Split large workloads across multiple robots using <strong>Parallel Processing</strong>.</li>
+</ul>
+<hr>
+<h2 class="code-line" data-line-start=1025 data-line-end=1026 ><a id="70_RPA_Framework_Best_Practices_1025"></a><strong>70. RPA Framework Best Practices</strong></h2>
+<h3 class="code-line" data-line-start=1027 data-line-end=1028 ><a id="Robotic_Enterprise_Framework_REFramework_1027"></a><strong>Robotic Enterprise Framework (REFramework)</strong></h3>
+<ol>
+<li class="has-line-data" data-line-start="1028" data-line-end="1029"><strong>Config File</strong>: Stores process settings and constants.</li>
+<li class="has-line-data" data-line-start="1029" data-line-end="1035"><strong>State Machine</strong>:
+<ul>
+<li class="has-line-data" data-line-start="1030" data-line-end="1031"><strong>Init State</strong>: Load configurations and initialize variables.</li>
+<li class="has-line-data" data-line-start="1031" data-line-end="1032"><strong>Get Transaction Data</strong>: Retrieve items to process.</li>
+<li class="has-line-data" data-line-start="1032" data-line-end="1033"><strong>Process Transaction</strong>: Execute logic for each item.</li>
+<li class="has-line-data" data-line-start="1033" data-line-end="1035"><strong>End Process</strong>: Clean up resources and log completion.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 class="code-line" data-line-start=1037 data-line-end=1038 ><a id="71_Advanced_Features_Computer_Vision_and_AI_1037"></a><strong>71. Advanced Features: Computer Vision and AI</strong></h2>
+<h3 class="code-line" data-line-start=1039 data-line-end=1040 ><a id="Computer_Vision_1039"></a><strong>Computer Vision</strong></h3>
+<ul>
+<li class="has-line-data" data-line-start="1040" data-line-end="1041">Automate applications with non-standard UIs (e.g., Citrix or Remote Desktops).</li>
+<li class="has-line-data" data-line-start="1041" data-line-end="1043">Use the <strong>Computer Vision Activities</strong> package for better element detection.</li>
+</ul>
+<h3 class="code-line" data-line-start=1043 data-line-end=1044 ><a id="AI_Center_1043"></a><strong>AI Center</strong></h3>
+<ul>
+<li class="has-line-data" data-line-start="1044" data-line-end="1045">Integrate ML models into workflows.</li>
+<li class="has-line-data" data-line-start="1045" data-line-end="1050">Example use cases:
+<ul>
+<li class="has-line-data" data-line-start="1046" data-line-end="1047">Sentiment analysis.</li>
+<li class="has-line-data" data-line-start="1047" data-line-end="1048">Image classification.</li>
+<li class="has-line-data" data-line-start="1048" data-line-end="1050">Document understanding.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 class="code-line" data-line-start=1052 data-line-end=1053 ><a id="72_Document_Understanding_1052"></a><strong>72. Document Understanding</strong></h2>
+<h3 class="code-line" data-line-start=1054 data-line-end=1055 ><a id="What_is_Document_Understanding_1054"></a><strong>What is Document Understanding?</strong></h3>
+<ul>
+<li class="has-line-data" data-line-start="1055" data-line-end="1057">Automate the extraction of structured data from unstructured documents like invoices or receipts.</li>
+</ul>
+<h3 class="code-line" data-line-start=1057 data-line-end=1058 ><a id="Key_Components_1057"></a><strong>Key Components</strong></h3>
+<ol>
+<li class="has-line-data" data-line-start="1058" data-line-end="1059"><strong>Taxonomy Manager</strong>: Define document types.</li>
+<li class="has-line-data" data-line-start="1059" data-line-end="1060"><strong>Intelligent OCR</strong>: Extract text with machine learning.</li>
+<li class="has-line-data" data-line-start="1060" data-line-end="1062"><strong>Data Extraction Scope</strong>: Validate extracted fields.</li>
+</ol>
+<hr>
+<h2 class="code-line" data-line-start=1064 data-line-end=1065 ><a id="73_Community_and_Marketplace_1064"></a><strong>73. Community and Marketplace</strong></h2>
+<h3 class="code-line" data-line-start=1066 data-line-end=1067 ><a id="UiPath_Community_1066"></a><strong>UiPath Community</strong></h3>
+<ol>
+<li class="has-line-data" data-line-start="1067" data-line-end="1068">Access forums for support and collaboration.</li>
+<li class="has-line-data" data-line-start="1068" data-line-end="1070">Participate in hackathons or community challenges.</li>
+</ol>
+<h3 class="code-line" data-line-start=1070 data-line-end=1071 ><a id="Marketplace_1070"></a><strong>Marketplace</strong></h3>
+<ul>
+<li class="has-line-data" data-line-start="1071" data-line-end="1073">Download prebuilt workflows, activities, and templates from the <strong>UiPath Marketplace</strong>.</li>
+</ul>
+<hr>
+<h2 class="code-line" data-line-start=1075 data-line-end=1076 ><a id="74_Licensing_Models_1075"></a><strong>74. Licensing Models</strong></h2>
+<h3 class="code-line" data-line-start=1077 data-line-end=1078 ><a id="Types_of_Licenses_1077"></a><strong>Types of Licenses</strong></h3>
+<ol>
+<li class="has-line-data" data-line-start="1078" data-line-end="1079"><strong>Community Edition</strong>: Free for individual use.</li>
+<li class="has-line-data" data-line-start="1079" data-line-end="1081"><strong>Enterprise Edition</strong>: Paid, with advanced features for businesses.</li>
+</ol>
+<hr>
+<h3 class="code-line" data-line-start=1083 data-line-end=1084 ><a id="75_Resources_and_Learning_1083"></a><strong>75. Resources and Learning</strong></h3>
+<ol>
+<li class="has-line-data" data-line-start="1085" data-line-end="1087"><strong>UiPath Academy</strong>:
+<ul>
+<li class="has-line-data" data-line-start="1086" data-line-end="1087">Free courses on everything from basics to advanced topics.</li>
+</ul>
+</li>
+<li class="has-line-data" data-line-start="1087" data-line-end="1089"><strong>UiPath Documentation</strong>:
+<ul>
+<li class="has-line-data" data-line-start="1088" data-line-end="1089">Comprehensive guides and API references.</li>
+</ul>
+</li>
+<li class="has-line-data" data-line-start="1089" data-line-end="1092"><strong>UiPath Marketplace</strong>:
+<ul>
+<li class="has-line-data" data-line-start="1090" data-line-end="1092">Prebuilt templates and components.</li>
+</ul>
+</li>
+</ol>
+<hr>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body></html>
