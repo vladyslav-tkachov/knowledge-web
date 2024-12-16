@@ -1,6 +1,6 @@
-# Knowledge-Web
+# [Knowledge-Web](https://vladyslav-tkachov.github.io/Knowledge-Web/index.html)
 
-This is a personal website showcasing my **Mini-Guides** on various technical topics. While the site will grow over time to include more projects and sections, the current focus is on helpful, well-structured guides for programming languages, general development tools, and RPA technologies.
+### This is a personal website showcasing my **Mini-Guides** on various technical topics. While the site will grow over time to include more projects and sections, the current focus is on helpful, well-structured guides for programming languages, general development tools, and RPA technologies.
 ---
 
 ## **Website Structure**
