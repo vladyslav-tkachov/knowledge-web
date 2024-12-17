@@ -72,6 +72,56 @@ a:hover {
     color:aqua;
 }
 
+/* Dark Mode Button Styling */
+.dark-mode-toggle {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 1000;
+}
+
+#dark-mode-btn {
+    background-color: #444;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+#dark-mode-btn:hover {
+    background-color: #f39c12;
+    color: #121212;
+}
+
+/* Responsive Dark Mode Button */
+@media (max-width: 768px) {
+    .dark-mode-toggle {
+        top: 5px;
+        right: 10px;
+    }
+
+    #dark-mode-btn {
+        padding: 6px 8px;
+        font-size: 0.8rem;
+        border-radius: 3px;
+    }
+}
+
+@media (max-width: 480px) {
+    .dark-mode-toggle {
+        top: 3px;
+        right: 5px;
+    }
+
+    #dark-mode-btn {
+        padding: 4px 6px;
+        font-size: 0.7rem;
+    }
+}
+
 hr {
     border: none;
     border-top: 2px solid #fff;
